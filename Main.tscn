@@ -645,6 +645,7 @@ offset_bottom = 148.0
 [connection signal="pressed" from="Camera2D/Panel/Main/Tavern" to="Camera2D/Panel/Main/Tavern" method="_on_pressed"]
 [connection signal="pressed" from="Camera2D/Panel/Main/Reserves" to="Camera2D/Panel/Main/Reserves" method="_on_pressed"]
 [connection signal="pressed" from="Camera2D/Panel/Gear/Button" to="Camera2D/Panel/Gear/Button" method="_on_pressed"]
+[connection signal="pressed" from="Camera2D/Panel/Adventure/Predict" to="Camera2D/Panel/Adventure/Stats" method="_on_predict_pressed"]
 [connection signal="pressed" from="Camera2D/Panel/Adventure/Start" to="Camera2D/Panel/Adventure/Stats" method="_on_start_pressed"]
 [connection signal="item_selected" from="Camera2D/Panel/Adventure/Level" to="Camera2D/Panel/Adventure/Level" method="_on_item_selected"]
 [connection signal="item_selected" from="Camera2D/Panel/Adventure/Level" to="Camera2D/Panel/Adventure/DropTier" method="_on_level_item_selected"]
