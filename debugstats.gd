@@ -1,29 +1,25 @@
 extends RichTextLabel
 
-@export var partyStats: Dictionary 
-var level: Dictionary
-
-func _on_level_item_selected(index: int) -> void:
-	level = Data.levels[$"../Level".get_item_text(index)]
-	text = ""
-	partyStats= {
+@export var partyStats = {
 		"COMP" : 0,
 	 	"PATK" : 0, 
 		"PDEF" : 0, 
 		"MATK" : 0, 
 		"MDEF" : 0
-	}
+	} 
+var level: Dictionary
+
+func _on_level_item_selected(index: int) -> void:
+	level = Data.levels[$"../Level".get_item_text(index)]
+	text = ""
 	if !Data.party:
 		return
-	print(Data.hired.get(Data.party))
 	for member in Data.hired.get(Data.party):
-		print(member)
 		for stat in partyStats.keys():
 			partyStats[stat] += Data.hires.get(member).get(stat)
 			
 	for stat in partyStats.keys():
 		text += stat + ": " + str(partyStats[stat]) + "\n"
-	print(partyStats)
 
 
 func _on_start_pressed() -> void:

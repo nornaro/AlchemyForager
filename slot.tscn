@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://do4gcaqda1x7h"]
+
+[ext_resource type="Script" path="res://slot.gd" id="1_7finl"]
+[ext_resource type="Texture2D" uid="uid://bvx8ugoe6aa70" path="res://Designer (1).png" id="1_x8e1r"]
+
+[node name="Button" type="Button"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_mode = 0
+icon = ExtResource("1_x8e1r")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("1_7finl")
+
+[connection signal="button_down" from="." to="." method="_on_button_down"]

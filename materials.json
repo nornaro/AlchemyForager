@@ -29,7 +29,7 @@
 		"hex": "#A8C3BC",
 		"use": "Inspiration, creativity, hope"
 	},
-	"Clear Quartz": {
+	"Quartz": {
 		"type": "Crystal",
 		"hex": "#E7ECEF",
 		"use": "Clarity, healing, energy amplification"
@@ -44,48 +44,33 @@
 		"hex": "#E4D00A",
 		"use": "Abundance, success, joy"
 	},
-	"Lapis Lazuli": {
-		"type": "Crystal",
-		"hex": "#26619C",
-		"use": "Truth, wisdom, spiritual insight"
-	},
-	"Rose Quartz": {
-		"type": "Crystal",
-		"hex": "#F7CAC9",
-		"use": "Love, compassion, peace"
-	},
-	"Smoky Quartz": {
-		"type": "Crystal",
-		"hex": "#73605B",
-		"use": "Grounding, protection, detoxification"
-	},
-	"Moldavite": {
-		"type": "Rare Stone",
-		"hex": "#4A7023",
-		"use": "Transformation, spiritual awakening"
-	},
 	"Obsidian": {
-		"type": "Rare Stone",
+		"type": "Crystal",
 		"hex": "#0B0B0B",
 		"use": "Protection, grounding, transformation"
 	},
+	"Moldavite": {
+		"type": "Stone",
+		"hex": "#4A7023",
+		"use": "Transformation, spiritual awakening"
+	},
 	"Black Tourmaline": {
-		"type": "Rare Stone",
+		"type": "Stone",
 		"hex": "#1E1E1E",
 		"use": "Protection, grounding, purification"
 	},
 	"Bloodstone": {
-		"type": "Rare Stone",
+		"type": "Stone",
 		"hex": "#274E13",
 		"use": "Courage, strength, vitality"
 	},
 	"Alexandrite": {
-		"type": "Rare Stone",
+		"type": "Stone",
 		"hex": "#3C8D0D",
 		"use": "Luck, balance, good fortune"
 	},
 	"Tanzanite": {
-		"type": "Rare Stone",
+		"type": "Stone",
 		"hex": "#7C83EE",
 		"use": "Transformation, higher consciousness"
 	},
@@ -119,29 +104,4 @@
 		"hex": "#2F4F4F",
 		"use": "Indestructible, legendary weapons and armor"
 	},
-	"Orichalcum": {
-		"type": "Metal",
-		"hex": "#D4AF37",
-		"use": "Magically resistant, ancient artifacts"
-	},
-	"Dragonsteel": {
-		"type": "Metal",
-		"hex": "#C0C0C0",
-		"use": "Infused with dragon essence, legendary"
-	},
-	"Star Metal": {
-		"type": "Metal",
-		"hex": "#191970",
-		"use": "Cosmic energy, rare celestial material"
-	},
-	"Ebonite": {
-		"type": "Metal",
-		"hex": "#1C1C1C",
-		"use": "Shadow-infused, stealthy weaponry"
-	},
-	"Arcanium": {
-		"type": "Metal",
-		"hex": "#6A0DAD",
-		"use": "Arcane-enhancing, magical tools and armor"
-	}
 }

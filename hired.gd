@@ -18,6 +18,8 @@ func _on_item_selected(index: int) -> void:
 func _on_add_pressed() -> void:
 	if !Data.party:
 		return
+	if Data.hired[Data.party].size() >= 5:
+		return
 	remove_item(idx)
 	Data.hired.Reserve.erase(txt)
 	Data.hired[Data.party].append(txt)
@@ -36,4 +38,4 @@ func add_member(hirename) -> void:
 	instance.name = hirename
 	instance.tooltip_text = hirename
 	instance.icon = load("res://"+Data.hires[hirename]["CLASS"]+".png")
-	%Parties.get_node(Data.party+"/Members").add_child(instance)
+	%Members.get_node(str(Data.party)).add_child(instance)

@@ -482,6 +482,29 @@
 		"PATK": 1,
 		"PDEF": 1
 	},
+	"Farion Dain Dawnstrider": {
+		"CLASS": "Archer",
+		"COMP": 1,
+		"EXP": 1,
+		"GEAR": {
+			"Armor": 0,
+			"Feet": 0,
+			"Head": 0,
+			"Main": 0,
+			"Potion1": 0,
+			"Potion2": 0,
+			"Potion3": 0,
+			"Side": 0,
+			"shoulder": 0,
+			"wrist": 0
+		},
+		"LVL": 1,
+		"MATK": 1,
+		"MDEF": 1,
+		"NAME": "Farion Dain Dawnstrider",
+		"PATK": 1,
+		"PDEF": 1
+	},
 	"Gessara": {
 		"CLASS": "Archer",
 		"COMP": 1,

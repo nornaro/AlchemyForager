@@ -71,7 +71,7 @@ func _on_hire_pressed(event: InputEvent) -> void:
 		Data.hired.Reserve.append(get_item_text(get_selected_items()[0]))
 	Data.write("hired")
 	remove_item(get_selected_items()[0])
-	$"../../Reserves/Hired"._ready()
+	%"Reserves/Hired"._ready()
 
 
 func _on_pressed() -> void:
@@ -86,15 +86,14 @@ func _on_add_hire_gui_input(event: InputEvent) -> void:
 	if !get_selected_items():
 		return
 	var hirename = get_item_text(get_selected_items()[0])
-	if event.button_index == MOUSE_BUTTON_LEFT:
+	if event.button_index == MOUSE_BUTTON_RIGHT:
 		if !Data.party:
 			return
-			
+		if Data.hired[Data.party].size() >= 5:
+			return
 		Data.hired[Data.party].append(hirename)
 		add_member(hirename)
-		if %Parties.get_node(Data.party+"/Members").get_child_count() == 7:
-			%v.get_node(Data.party+"/Members/Add").hide()
-	if event.button_index == MOUSE_BUTTON_RIGHT:
+	if event.button_index == MOUSE_BUTTON_LEFT:
 		Data.hired.Reserve.append(hirename)
 	Data.write("hired")
 	remove_item(get_selected_items()[0])
@@ -106,4 +105,4 @@ func add_member(hirename) -> void:
 	instance.name = hirename
 	instance.tooltip_text = hirename
 	instance.icon = load("res://"+Data.hires[hirename]["CLASS"]+".png")
-	%Parties.get_node(Data.party+"/Members").add_child(instance)
+	%Members.get_node(str(Data.party)).add_child(instance)

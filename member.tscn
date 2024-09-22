@@ -21,3 +21,5 @@ stats = {
 "PATK": 0,
 "PDEF": 0
 }
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

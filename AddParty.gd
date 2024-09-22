@@ -7,7 +7,6 @@ func _ready() -> void:
 	for party in Data.hired.keys():
 		if party == "Reserve":
 			continue
-		print(party)
 		%Parties.get_node(party).show()
 	pass # Replace with function body.
 

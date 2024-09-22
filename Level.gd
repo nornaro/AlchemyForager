@@ -3,14 +3,18 @@ extends ItemList
 var last = 1
 var step = 1000
 
-# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	$"../../HBoxContainer1/Search".text = ""
+	$"../../HBoxContainer1/DropTier".text = ""
+
+
 func add_levels() -> void:
 	clear()
 	if last < 1:
 		last = 1
 	for i in range(last, last+9999):
-		if !$"../Search".text || str(i).containsn(str($"../Search".text)):
-			add_item(str(i).pad_zeros(11))
+		if !$"../../HBoxContainer1/Search".text || str(i).containsn(str(!$"../../HBoxContainer1/Search".text)):
+			add_item(str(i).pad_zeros(9))
 
 	
 func _process(delta: float) -> void:
