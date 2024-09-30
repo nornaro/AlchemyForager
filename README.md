@@ -1,1 +1,2 @@
 "# AlchemyForager" 
+godot-sqlite required
