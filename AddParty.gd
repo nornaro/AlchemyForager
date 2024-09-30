@@ -4,13 +4,8 @@ var party_count = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	for party in Data.hired.keys():
-		if party == "Reserve":
-			continue
-		if party == "Dead":
-			continue
-		%Parties.get_node(party).show()
-	pass # Replace with function body.
+	for number in Data.db.select_rows("Party","Active = true",["id"]):
+		%Parties.get_node("Party"+str(number.id)).show()
 
 
 func _on_pressed() -> void:

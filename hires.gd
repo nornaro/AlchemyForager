@@ -72,21 +72,21 @@ func _on_add_hire_gui_input(event: InputEvent) -> void:
 	if event.button_index == MOUSE_BUTTON_RIGHT:
 		if !Data.party:
 			return
-		if Data.hired[Data.party].size() >= 5:
+		if Data.db.select_rows("Adventurer","party = '"+Data.party+"'",["id"]).size() >= 5:
 			return
-		Data.hired[Data.party].append(hirename)
+		Data.db.update_rows("Adventurer","name = '"+hirename+"'",{"party":Data.party})
 		add_member(hirename)
 	if event.button_index == MOUSE_BUTTON_LEFT:
-		Data.hired.Reserve.append(hirename)
+		Data.db.update_rows("Adventurer","name = '"+hirename+"'",{"party":"Reserve"})
 	remove_item(get_selected_items()[0])
-	$"../../Reserves/Hired"._ready()
+	$"../../Reserves/Hired".add_item(hirename)
 
 func add_member(hirename) -> void:
-	var scene = load("res://member.tscn")
+	var scene = load("res://Scenes/member.tscn")
 	var instance = scene.instantiate()
 	instance.name = hirename
 	instance.tooltip_text = hirename
-	instance.icon = load("res://"+Data.hires[hirename]["CLASS"]+".png")
+	instance.icon = load("res://"+Data.db.select_rows("Adventurer","name ='"+hirename+"'",["class"])[0].class+".png")
 	%Members.get_node(str(Data.party)).add_child(instance)
 
 

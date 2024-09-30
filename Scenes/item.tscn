@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://ba8tnawihp6qb"]
 
-[ext_resource type="Script" path="res://item.gd" id="1_lw2ne"]
+[ext_resource type="Script" path="res://item.gd" id="1_fwsgi"]
 
 [node name="Item" type="TextureRect"]
 anchors_preset = 15
@@ -10,7 +10,7 @@ grow_horizontal = 2
 grow_vertical = 2
 expand_mode = 1
 stretch_mode = 5
-script = ExtResource("1_lw2ne")
+script = ExtResource("1_fwsgi")
 
 [node name="LineEdit" type="LineEdit" parent="."]
 layout_mode = 1

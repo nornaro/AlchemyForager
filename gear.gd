@@ -9,6 +9,8 @@ func _ready() -> void:
 
 
 func hire(hirename) -> void:
+	var adventurer = Data.db.select_rows("Adventurer","name ='"+hirename+"'",["*"])[0]
+	print(adventurer)
 	if hired == hirename:
 		hide()
 		hired = ""
@@ -19,16 +21,16 @@ func hire(hirename) -> void:
 	hired = hirename
 	$Stats.text = "[center]"
 	$Stats.text += hirename+"\n"
-	$Stats.text += "Lelevl: 1 - " + str(Data.hires[hirename]["CLASS"])+"\n\n"
-	$Stats.text += "Exp: " + str(Data.hires[hirename]["EXP"])+"\n"
-	$Stats.text += "COMP: " + str(Data.hires[hirename]["COMP"])+"\n"
-	$Stats.text += "PATK: " + str(Data.hires[hirename]["PATK"])+"\n"
-	$Stats.text += "PDEF: " + str(Data.hires[hirename]["PDEF"])+"\n"
-	$Stats.text += "MATK: " + str(Data.hires[hirename]["MATK"])+"\n"
-	$Stats.text += "MDEF: " + str(Data.hires[hirename]["MDEF"])+"\n"
+	$Stats.text += "Lelevl: " + str(adventurer.lvl) + " - " + adventurer.class + "\n\n"
+	$Stats.text += "Exp: " + str(adventurer.xp) + "\n"
+	$Stats.text += "COMP: " + str(adventurer.comp) + "\n"
+	$Stats.text += "PATK: " + str(adventurer.patk) + "\n"
+	$Stats.text += "PDEF: " + str(adventurer.pdef) + "\n"
+	$Stats.text += "MATK: " + str(adventurer.matk) + "\n"
+	$Stats.text += "MDEF: " + str(adventurer.mdef) + "\n"
 	$Stats.text += "[/center]"
 	get_tree().call_group("Body","hide")
-	get_node("Body"+Data.hires[hirename]["GENDER"]).show()
+	get_node("Body"+adventurer.gender).show()
 
 
 func _on_stats_button_pressed() -> void:

@@ -1,11 +1,12 @@
 extends Control
 
 var inventorySize = 80
-var slotscene = preload("res://slot.tscn")
-var itemscene = preload("res://item.tscn")
+var slotscene = preload("res://Scenes/slot.tscn")
+var itemscene = preload("res://Scenes/item.tscn")
 var isize
 
 func _ready() -> void:
+	print("asd")
 	show()
 	call_deferred("_initialize_inventory")
 

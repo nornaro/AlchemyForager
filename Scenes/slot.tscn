@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://do4gcaqda1x7h"]
 
-[ext_resource type="Script" path="res://slot.gd" id="1_7finl"]
-[ext_resource type="Texture2D" uid="uid://bswiam1ov5x8d" path="res://Designs/Designer (1).png" id="1_x8e1r"]
+[ext_resource type="Texture2D" uid="uid://c1l2oq5y3rwh0" path="res://Designs/Designer (1).png" id="1_1o40o"]
+[ext_resource type="Script" path="res://slot.gd" id="2_o0ygn"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ofaoa"]
-texture = ExtResource("1_x8e1r")
+texture = ExtResource("1_1o40o")
 
 [node name="Slot" type="Panel"]
 anchors_preset = 15
@@ -16,7 +16,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 focus_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_ofaoa")
-script = ExtResource("1_7finl")
+script = ExtResource("2_o0ygn")
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

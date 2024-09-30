@@ -8,11 +8,8 @@ extends Node
 	}
 @export var Zeny = 10000000000000
 var party = ""
-var hires = {}
-var hired = {}
 var levels = {}
 var classes = ["Fighter", "Archer", "Mage", "Priest"]
-var inventory = {}
 var textures = {}
 var item = []
 var slot = []
@@ -55,12 +52,12 @@ func join(arr):
 	return result
 	
 func create_db():
-	var party = {
+	var pty = {
 		"id" : {"data_type":"int", "primary_key":true, "not_null":true, "auto_increment":true},
 		"active": {"data_type":"int", "not_null":true, "default": 0},
 		"price": {"data_type":"int"}
 	}
-	db.create_table("Party",party)
+	db.create_table("Party",pty)
 	db.insert_rows("Party",[{"price": 0},{"price": 10},{"price": 100},{"price": 10000},{"price": 100000000},{"price": 10000000000000000}])
 
 	var item_db = {
@@ -115,7 +112,7 @@ func create_db():
 	db.create_table("Crystal", inventory)
 	db.create_table("Stone", inventory)
 	db.create_table("Ore", inventory)
-	db.create_table("Inventory", item_db)
+	db.create_table("Inventory", equip)
 	db.create_table("Adventurer", adventurer)
 	
 func write(filename) -> void:

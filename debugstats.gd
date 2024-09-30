@@ -16,9 +16,9 @@ func _on_level_item_selected(index: int) -> void:
 	text = ""
 	if !Data.party:
 		return
-	for member in Data.hired.get(Data.party):
+	for member in Data.db.select_rows("Adventurer","party ='"+Data.party+"'",partyStats.keys()):
 		for stat in partyStats.keys():
-			partyStats[stat] += Data.hires.get(member).get(stat)
+			partyStats[stat] += member.get(stat)
 			
 	for stat in partyStats.keys():
 		text += stat + ": " + str(partyStats[stat]) + "\n"

@@ -51,7 +51,6 @@ func _on_text_submitted(_new_text: String) -> void:
 	print(add)
 	if !add:
 		source.get_node(str(Data.slot[0])).add(Data.slot[1].to_int(),Data.item[2])
-	#Data.write("inventory")
 	_on_focus_exited()
 
 func _on_focus_entered() -> void:

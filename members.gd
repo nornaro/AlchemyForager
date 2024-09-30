@@ -1,6 +1,6 @@
 extends Control
 
-var scene = preload("res://member.tscn")
+var scene = preload("res://Scenes/member.tscn")
 var Priest = preload("res://Priest.png")
 var Archer = preload("res://Archer.png")
 var Fighter = preload("res://Fighter.png")
@@ -8,27 +8,14 @@ var Mage = preload("res://Mage.png")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	for party in Data.hired.keys():
-		if party == "Dead":
-			continue
-		if party == "Reserve":
-			continue
-		if party == "Add":
-			continue
-		var members = Data.hired.get(party)
-		if members.size() == 0:
-			continue
-		for member in members:
-			var instance = scene.instantiate()
-			instance.name = member
-			instance.tooltip_text = member
-			match Data.hires[member]["CLASS"]:
-				"Priest":
-					instance.icon = Priest
-				"Archer":
-					instance.icon = Archer
-				"Fighter":
-					instance.icon = Fighter
-				"Mage":
-					instance.icon = Mage
-			get_node(party).add_child(instance)
+	for member in Data.db.select_rows("Adventurer","party != 'Dead' AND party != 'Reserve' AND party != 'free'",["party","name","class"]):
+		var instance = scene.instantiate()
+		instance.name = member.name
+		instance.tooltip_text = member.name
+		instance.icon = get(member.class)
+		get_node(member.party).add_child(instance)
+
+func show_party(party) -> void:
+	get_tree().call_group("Members","hide")
+	get_node(party).show()
+	Data.party = party

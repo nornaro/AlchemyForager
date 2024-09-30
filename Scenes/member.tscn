@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhlvdtf0reh83"]
+
+[ext_resource type="Texture2D" uid="uid://3uqvovbshh5i" path="res://Fighter.png" id="1_yu5i0"]
+[ext_resource type="Script" path="res://member.gd" id="2_x0n8x"]
+
+[node name="Member" type="Button"]
+custom_minimum_size = Vector2(96, 96)
+layout_direction = 1
+focus_mode = 0
+icon = ExtResource("1_yu5i0")
+flat = true
+expand_icon = true
+script = ExtResource("2_x0n8x")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

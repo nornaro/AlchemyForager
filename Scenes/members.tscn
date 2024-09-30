@@ -1,0 +1,92 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6pwgar5n53cx"]
+
+[ext_resource type="Script" path="res://members.gd" id="1_unknw"]
+
+[node name="Members" type="Control"]
+layout_mode = 3
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -1.0
+offset_right = -1.0
+grow_vertical = 2
+script = ExtResource("1_unknw")
+
+[node name="Party1" type="VBoxContainer" parent="." groups=["Members"]]
+visible = false
+custom_minimum_size = Vector2(90, 500)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -250.0
+offset_right = 90.0
+offset_bottom = 250.0
+grow_vertical = 2
+alignment = 1
+
+[node name="Party2" type="VBoxContainer" parent="." groups=["Members"]]
+visible = false
+custom_minimum_size = Vector2(90, 500)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -250.0
+offset_right = 90.0
+offset_bottom = 250.0
+grow_vertical = 2
+alignment = 1
+
+[node name="Party3" type="VBoxContainer" parent="." groups=["Members"]]
+visible = false
+custom_minimum_size = Vector2(90, 500)
+layout_direction = 1
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -250.0
+offset_right = 90.0
+offset_bottom = 250.0
+grow_vertical = 2
+alignment = 1
+
+[node name="Party4" type="VBoxContainer" parent="." groups=["Members"]]
+visible = false
+custom_minimum_size = Vector2(90, 500)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -250.0
+offset_right = 90.0
+offset_bottom = 250.0
+grow_vertical = 2
+alignment = 1
+
+[node name="Party5" type="VBoxContainer" parent="." groups=["Members"]]
+visible = false
+custom_minimum_size = Vector2(90, 500)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -250.0
+offset_right = 90.0
+offset_bottom = 250.0
+grow_vertical = 2
+alignment = 1
+
+[node name="Party6" type="VBoxContainer" parent="." groups=["Members"]]
+visible = false
+custom_minimum_size = Vector2(90, 500)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -250.0
+offset_right = 90.0
+offset_bottom = 250.0
+grow_vertical = 2
+alignment = 1

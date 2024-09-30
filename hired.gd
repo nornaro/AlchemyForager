@@ -1,7 +1,7 @@
 extends ItemList
 
 var idx: int
-var txt: String
+var adventurer_name: String
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -12,31 +12,28 @@ func _ready() -> void:
 
 func _on_item_selected(index: int) -> void:
 	idx = index
-	txt = get_item_text(index)
-	get_tree().call_group("Gear","hire",txt)
+	adventurer_name = get_item_text(index)
+	get_tree().call_group("Gear","hire",adventurer_name)
 
 
 func _on_add_pressed() -> void:
 	if !Data.party:
 		return
-	if Data.hired[Data.party].size() >= 5:
+	if Data.db.select_rows("Adventurer","party ='"+Data.party+"'",["id"]).size() >= 5:
 		return
 	remove_item(idx)
-	Data.hired.Reserve.erase(txt)
-	Data.hired[Data.party].append(txt)
-	add_member(txt)
-	Data.write("hired")
+	Data.db.update_rows("Adventurer","name = '"+adventurer_name+"'",{"party": Data.party})
+	add_member(adventurer_name)
 
 
 func _on_terminate_pressed() -> void:
 	remove_item(idx)
-	Data.hired.Reserve.erase(txt)
-	Data.write("hired")
+	Data.db.update_rows("Adventurer","name ='"+adventurer_name+"'",{"party":"free"})
 
 func add_member(hirename) -> void:
-	var scene = load("res://member.tscn")
+	var scene = load("res://Scenes/member.tscn")
 	var instance = scene.instantiate()
 	instance.name = hirename
 	instance.tooltip_text = hirename
-	instance.icon = load("res://"+Data.hires[hirename]["CLASS"]+".png")
+	instance.icon = load("res://"+Data.db.select_rows("Adventurer","name ='"+adventurer_name+"'",["class"])[0].class+".png")
 	%Members.get_node(str(Data.party)).add_child(instance)

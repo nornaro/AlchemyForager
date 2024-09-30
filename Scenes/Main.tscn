@@ -1,0 +1,800 @@
+[gd_scene load_steps=42 format=3 uid="uid://cth6bsqd4gpyn"]
+
+[ext_resource type="Texture2D" uid="uid://bkltg02rxjnlk" path="res://BackGround.png" id="1_37c11"]
+[ext_resource type="Script" path="res://back_ground.gd" id="2_dspcp"]
+[ext_resource type="Texture2D" uid="uid://ckpnds4qc7v8j" path="res://Button.png" id="2_tlkrj"]
+[ext_resource type="Script" path="res://stack.gd" id="4_f3ok8"]
+[ext_resource type="Script" path="res://menu.gd" id="5_0nr4k"]
+[ext_resource type="Texture2D" uid="uid://l7a0u7u20t7k" path="res://Gear.png" id="8_2u02f"]
+[ext_resource type="Script" path="res://gear.gd" id="9_ftp8u"]
+[ext_resource type="Script" path="res://main.gd" id="9_nggfl"]
+[ext_resource type="Texture2D" uid="uid://cgxjwf3h1tllb" path="res://BodyF1.png" id="10_m7go5"]
+[ext_resource type="Texture2D" uid="uid://danxxjjeaxvfe" path="res://BodyM2.png" id="11_7wbgb"]
+[ext_resource type="Texture2D" uid="uid://6hewh2osgv1u" path="res://Gender.png" id="12_5ltmi"]
+[ext_resource type="Texture2D" uid="uid://cusqo8yqhw25x" path="res://AddParty.png" id="12_7bsa7"]
+[ext_resource type="Script" path="res://button.gd" id="13_jgrad"]
+[ext_resource type="PackedScene" uid="uid://c4g8tge2ql06b" path="res://Scenes/alchemy.tscn" id="13_q4grf"]
+[ext_resource type="Texture2D" uid="uid://c3aj0jkjrrkhh" path="res://Alchemic.png" id="14_at2sk"]
+[ext_resource type="Texture2D" uid="uid://bg2ewsg24g80t" path="res://Alchemi.png" id="16_gsnyb"]
+[ext_resource type="Texture2D" uid="uid://fp0menuffyny" path="res://Inventori.png" id="18_7ssj8"]
+[ext_resource type="Texture2D" uid="uid://blhaoey4jrmnu" path="res://Snowflake.png" id="20_i11t0"]
+[ext_resource type="Texture2D" uid="uid://cui1pwej8wx3y" path="res://Adventure.png" id="20_qpsp6"]
+[ext_resource type="Script" path="res://inventoryContainer.gd" id="21_irbow"]
+[ext_resource type="Texture2D" uid="uid://cj42hlf4ab8jo" path="res://Apache.png" id="21_vvtoo"]
+[ext_resource type="Texture2D" uid="uid://lxyj3t3ma0f7" path="res://crossed-axes.svg" id="22_gpp3w"]
+[ext_resource type="Texture2D" uid="uid://budlvni2t1kyt" path="res://Helicopter.png" id="22_tmhym"]
+[ext_resource type="Texture2D" uid="uid://dmes1mkr14epl" path="res://Tavern.png" id="24_bbuiu"]
+[ext_resource type="PackedScene" uid="uid://j1a3yteb8swm" path="res://Scenes/equipment.tscn" id="24_gm2lr"]
+[ext_resource type="Texture2D" uid="uid://dwvqkilygm6cr" path="res://AdventureBox.png" id="30_sb2w3"]
+[ext_resource type="Script" path="res://Level.gd" id="31_24brd"]
+[ext_resource type="Script" path="res://drop_tier.gd" id="32_sjpkp"]
+[ext_resource type="PackedScene" uid="uid://c6pwgar5n53cx" path="res://Scenes/members.tscn" id="33_mpsr4"]
+[ext_resource type="Script" path="res://hires.gd" id="34_td7jr"]
+[ext_resource type="Script" path="res://party_list.gd" id="35_demvq"]
+[ext_resource type="Script" path="res://debugstats.gd" id="37_swe2v"]
+[ext_resource type="Script" path="res://inventory.gd" id="42_tirer"]
+[ext_resource type="Script" path="res://cursor.gd" id="43_kmi6g"]
+[ext_resource type="Script" path="res://hired.gd" id="44_e2a1r"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wawb3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yasb4"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_mooqk"]
+
+[sub_resource type="Theme" id="Theme_s3625"]
+default_font_size = 16
+
+[sub_resource type="Theme" id="Theme_obnsp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fhrne"]
+
+[node name="PanelContainer" type="PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 2
+script = ExtResource("43_kmi6g")
+
+[node name="BackGround" type="TextureRect" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -190.0
+offset_bottom = 190.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_37c11")
+script = ExtResource("2_dspcp")
+
+[node name="OptionsMenu" type="MenuButton" parent="Panel"]
+custom_minimum_size = Vector2(64, 64)
+layout_direction = 1
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 96.0
+icon = ExtResource("2_tlkrj")
+vertical_icon_alignment = 0
+expand_icon = true
+item_count = 1
+popup/item_0/text = "Exit"
+script = ExtResource("5_0nr4k")
+
+[node name="Stack" type="LineEdit" parent="Panel" groups=["Stack"]]
+visible = false
+top_level = true
+layout_mode = 0
+offset_right = 100.0
+offset_bottom = 42.0
+context_menu_enabled = false
+structured_text_bidi_override = 6
+script = ExtResource("4_f3ok8")
+
+[node name="MainMenuBar" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -208.5
+offset_bottom = 208.5
+grow_horizontal = 0
+grow_vertical = 2
+alignment = 1
+
+[node name="LPanel" type="ItemList" parent="Panel/MainMenuBar"]
+light_mask = 0
+layout_direction = 1
+layout_mode = 2
+focus_mode = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_wawb3")
+allow_reselect = true
+auto_height = true
+item_count = 1
+item_0/text = "Alchemy"
+item_0/icon = ExtResource("16_gsnyb")
+script = ExtResource("9_nggfl")
+
+[node name="RPanel" type="ItemList" parent="Panel/MainMenuBar"]
+light_mask = 0
+layout_mode = 2
+focus_mode = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_yasb4")
+allow_reselect = true
+auto_height = true
+item_count = 3
+item_0/text = "Inventory"
+item_0/icon = ExtResource("18_7ssj8")
+item_1/text = "Adventure"
+item_1/icon = ExtResource("20_qpsp6")
+item_2/text = "Tavern"
+item_2/icon = ExtResource("24_bbuiu")
+script = ExtResource("9_nggfl")
+
+[node name="Camera2D" type="Camera2D" parent="Panel"]
+anchor_mode = 0
+
+[node name="Panels" type="HBoxContainer" parent="Panel"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 133.0
+offset_top = 134.0
+offset_right = -133.0
+offset_bottom = -84.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LPanel" type="Panel" parent="Panel/Panels"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Alchemy" type="TextureRect" parent="Panel/Panels/LPanel" groups=["LPanel"]]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("14_at2sk")
+expand_mode = 1
+
+[node name="Alchemy" parent="Panel/Panels/LPanel/Alchemy" instance=ExtResource("13_q4grf")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 70.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/Panels/LPanel/Alchemy"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -273.0
+offset_top = -42.0
+offset_right = 275.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Panel2" type="Panel" parent="Panel/Panels/LPanel/Alchemy/HBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Runes1" type="Button" parent="Panel/Panels/LPanel/Alchemy/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+theme_override_font_sizes/font_size = 24
+text = " "
+
+[node name="Panel3" type="RichTextLabel" parent="Panel/Panels/LPanel/Alchemy/HBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+text = " "
+fit_content = true
+
+[node name="Runes2" type="Button" parent="Panel/Panels/LPanel/Alchemy/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+theme_override_font_sizes/font_size = 24
+text = " "
+
+[node name="Panel" type="Panel" parent="Panel/Panels/LPanel/Alchemy/HBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Gear" type="TextureRect" parent="Panel/Panels/LPanel" groups=["Gear", "LPanel"]]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_2u02f")
+expand_mode = 1
+script = ExtResource("9_ftp8u")
+
+[node name="BodyFemale" type="TextureRect" parent="Panel/Panels/LPanel/Gear" groups=["Body"]]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_m7go5")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="BodyMale" type="TextureRect" parent="Panel/Panels/LPanel/Gear" groups=["Body"]]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_7wbgb")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="BodySnowflake" type="TextureRect" parent="Panel/Panels/LPanel/Gear" groups=["Body"]]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("20_i11t0")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="BodyApache" type="TextureRect" parent="Panel/Panels/LPanel/Gear" groups=["Body"]]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("21_vvtoo")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="BodyHelicopter" type="TextureRect" parent="Panel/Panels/LPanel/Gear" groups=["Body"]]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("22_tmhym")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="BG" type="TextureRect" parent="Panel/Panels/LPanel/Gear"]
+visible = false
+modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(250, 400)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -124.0
+offset_top = -246.0
+offset_right = 126.0
+offset_bottom = 248.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("PlaceholderTexture2D_mooqk")
+
+[node name="Stats" type="RichTextLabel" parent="Panel/Panels/LPanel/Gear"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 150.0
+offset_top = 50.0
+offset_right = -148.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_s3625")
+bbcode_enabled = true
+fit_content = true
+
+[node name="Button" type="Button" parent="Panel/Panels/LPanel/Gear"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -124.0
+offset_top = 15.0
+offset_right = -92.0
+offset_bottom = 47.0
+grow_horizontal = 2
+focus_mode = 0
+toggle_mode = true
+icon = ExtResource("12_5ltmi")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("13_jgrad")
+
+[node name="StatsButton" type="Button" parent="Panel/Panels/LPanel/Gear"]
+z_index = 5
+clip_contents = true
+layout_direction = 1
+layout_mode = 1
+offset_left = 375.0
+offset_top = 15.0
+offset_right = 407.0
+offset_bottom = 57.0
+tooltip_text = "Loop Stats visibility"
+focus_mode = 0
+theme_override_font_sizes/font_size = 24
+toggle_mode = true
+text = "S"
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Axe" type="Button" parent="Panel/Panels/LPanel/Gear"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -16.0
+offset_top = -32.0
+offset_right = 16.0
+grow_horizontal = 2
+grow_vertical = 0
+focus_mode = 0
+icon = ExtResource("22_gpp3w")
+icon_alignment = 1
+expand_icon = true
+
+[node name="ConfirmFire" type="Button" parent="Panel/Panels/LPanel/Gear/Axe"]
+visible = false
+modulate = Color(1, 0.364706, 0, 1)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 41.0
+offset_top = -31.0
+offset_right = 112.0
+grow_horizontal = 0
+grow_vertical = 0
+focus_mode = 0
+text = "Remove"
+
+[node name="Timer" type="Timer" parent="Panel/Panels/LPanel/Gear/Axe"]
+wait_time = 5.0
+
+[node name="Equipment" parent="Panel/Panels/LPanel/Gear" instance=ExtResource("24_gm2lr")]
+layout_mode = 0
+anchors_preset = 0
+
+[node name="RPanel" type="Panel" parent="Panel/Panels"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Inventory" type="TabContainer" parent="Panel/Panels/RPanel" groups=["RPanel"]]
+unique_name_in_owner = true
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+tab_alignment = 1
+current_tab = 0
+tab_focus_mode = 0
+script = ExtResource("21_irbow")
+
+[node name="Item" type="GridContainer" parent="Panel/Panels/RPanel/Inventory"]
+layout_mode = 2
+theme = SubResource("Theme_obnsp")
+columns = 5
+script = ExtResource("42_tirer")
+metadata/_tab_index = 0
+
+[node name="Gem" type="GridContainer" parent="Panel/Panels/RPanel/Inventory"]
+visible = false
+layout_mode = 2
+theme = SubResource("Theme_obnsp")
+columns = 10
+script = ExtResource("42_tirer")
+metadata/_tab_index = 1
+
+[node name="Crystal" type="GridContainer" parent="Panel/Panels/RPanel/Inventory"]
+visible = false
+layout_mode = 2
+theme = SubResource("Theme_obnsp")
+columns = 10
+script = ExtResource("42_tirer")
+metadata/_tab_index = 2
+
+[node name="Stone" type="GridContainer" parent="Panel/Panels/RPanel/Inventory"]
+visible = false
+layout_mode = 2
+theme = SubResource("Theme_obnsp")
+columns = 10
+script = ExtResource("42_tirer")
+metadata/_tab_index = 3
+
+[node name="Ore" type="GridContainer" parent="Panel/Panels/RPanel/Inventory"]
+visible = false
+layout_mode = 2
+theme = SubResource("Theme_obnsp")
+columns = 10
+script = ExtResource("42_tirer")
+metadata/_tab_index = 4
+
+[node name="Adventure" type="TextureRect" parent="Panel/Panels/RPanel" groups=["RPanel"]]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("30_sb2w3")
+expand_mode = 1
+
+[node name="Step" type="TextEdit" parent="Panel/Panels/RPanel/Adventure"]
+visible = false
+layout_mode = 0
+offset_left = -200.0
+offset_top = 264.0
+offset_right = 50.0
+offset_bottom = 314.0
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/Panels/RPanel/Adventure"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Panel/Panels/RPanel/Adventure/VBoxContainer"]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+
+[node name="TopContainer" type="HBoxContainer" parent="Panel/Panels/RPanel/Adventure/VBoxContainer"]
+layout_mode = 2
+
+[node name="Search" type="RichTextLabel" parent="Panel/Panels/RPanel/Adventure/VBoxContainer/TopContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = " "
+
+[node name="DropTier" type="RichTextLabel" parent="Panel/Panels/RPanel/Adventure/VBoxContainer/TopContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = " "
+fit_content = true
+script = ExtResource("32_sjpkp")
+
+[node name="MidContainer" type="HBoxContainer" parent="Panel/Panels/RPanel/Adventure/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Panel2" type="Panel" parent="Panel/Panels/RPanel/Adventure/VBoxContainer/MidContainer"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+
+[node name="Level" type="ItemList" parent="Panel/Panels/RPanel/Adventure/VBoxContainer/MidContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+theme_override_font_sizes/font_size = 24
+allow_reselect = true
+max_text_lines = 8
+script = ExtResource("31_24brd")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/Panels/RPanel/Adventure/VBoxContainer/MidContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Stats" type="RichTextLabel" parent="Panel/Panels/RPanel/Adventure/VBoxContainer/MidContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+script = ExtResource("37_swe2v")
+
+[node name="Result" type="RichTextLabel" parent="Panel/Panels/RPanel/Adventure/VBoxContainer/MidContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+
+[node name="VBoxContainer" type="HBoxContainer" parent="Panel/Panels/RPanel/Adventure/VBoxContainer/MidContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Prediction" type="TextEdit" parent="Panel/Panels/RPanel/Adventure/VBoxContainer/MidContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Prediction:"
+editable = false
+scroll_fit_content_height = true
+
+[node name="Predict" type="RichTextLabel" parent="Panel/Panels/RPanel/Adventure/VBoxContainer/MidContainer/VBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = " "
+fit_content = true
+
+[node name="Panel" type="Panel" parent="Panel/Panels/RPanel/Adventure/VBoxContainer/MidContainer"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+
+[node name="BotContainer" type="HBoxContainer" parent="Panel/Panels/RPanel/Adventure/VBoxContainer"]
+layout_mode = 2
+
+[node name="Panel2" type="Panel" parent="Panel/Panels/RPanel/Adventure/VBoxContainer/BotContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Predict" type="Button" parent="Panel/Panels/RPanel/Adventure/VBoxContainer/BotContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+theme_override_font_sizes/font_size = 24
+text = "Predict"
+flat = true
+
+[node name="Panel3" type="RichTextLabel" parent="Panel/Panels/RPanel/Adventure/VBoxContainer/BotContainer"]
+layout_mode = 2
+text = " "
+fit_content = true
+
+[node name="Start" type="Button" parent="Panel/Panels/RPanel/Adventure/VBoxContainer/BotContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+theme_override_font_sizes/font_size = 24
+text = "Start
+"
+flat = true
+
+[node name="Panel" type="Panel" parent="Panel/Panels/RPanel/Adventure/VBoxContainer/BotContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Panel3" type="Panel" parent="Panel/Panels/RPanel/Adventure/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+
+[node name="Tavern" type="HBoxContainer" parent="Panel/Panels/RPanel" groups=["RPanel"]]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Tavern" type="TextureRect" parent="Panel/Panels/RPanel/Tavern"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("30_sb2w3")
+expand_mode = 1
+
+[node name="Refresh" type="Button" parent="Panel/Panels/RPanel/Tavern/Tavern"]
+layout_mode = 0
+offset_left = 61.0
+offset_top = 501.0
+offset_right = 131.0
+offset_bottom = 551.0
+focus_mode = 0
+text = "Refresh"
+flat = true
+
+[node name="Hire" type="Button" parent="Panel/Panels/RPanel/Tavern/Tavern"]
+layout_mode = 0
+offset_left = 139.0
+offset_top = 501.0
+offset_right = 209.0
+offset_bottom = 551.0
+tooltip_text = "RMB adds directly"
+focus_mode = 0
+button_mask = 3
+text = "Hire"
+flat = true
+
+[node name="Hires" type="ItemList" parent="Panel/Panels/RPanel/Tavern/Tavern"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = 37.0
+offset_right = 125.0
+offset_bottom = -53.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+focus_mode = 0
+theme_override_font_sizes/font_size = 16
+allow_reselect = true
+max_text_lines = 8
+script = ExtResource("34_td7jr")
+
+[node name="TavernTimer" type="Timer" parent="Panel/Panels/RPanel/Tavern/Tavern"]
+unique_name_in_owner = true
+wait_time = 60.0
+autostart = true
+
+[node name="Reserves" type="TextureRect" parent="Panel/Panels/RPanel/Tavern"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("30_sb2w3")
+expand_mode = 1
+
+[node name="Fire" type="Button" parent="Panel/Panels/RPanel/Tavern/Reserves"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 500.0
+offset_right = 134.0
+offset_bottom = 550.0
+focus_mode = 0
+text = "Fire"
+
+[node name="Add" type="Button" parent="Panel/Panels/RPanel/Tavern/Reserves"]
+layout_mode = 0
+offset_left = 139.0
+offset_top = 500.0
+offset_right = 209.0
+offset_bottom = 550.0
+focus_mode = 0
+text = "Add"
+flat = true
+
+[node name="Hired" type="ItemList" parent="Panel/Panels/RPanel/Tavern/Reserves"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = 37.0
+offset_right = 125.0
+offset_bottom = -53.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+focus_mode = 0
+theme_override_font_sizes/font_size = 16
+allow_reselect = true
+max_text_lines = 8
+script = ExtResource("44_e2a1r")
+
+[node name="Members" parent="Panel" instance=ExtResource("33_mpsr4")]
+unique_name_in_owner = true
+layout_mode = 1
+
+[node name="PartyList" type="ItemList" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -456.0
+offset_right = 160.0
+offset_bottom = 108.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+tooltip_text = "Next level:0z"
+focus_mode = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_fhrne")
+auto_height = true
+item_count = 6
+max_columns = 6
+item_0/selectable = false
+item_0/disabled = true
+item_1/icon = ExtResource("12_7bsa7")
+item_1/selectable = false
+item_2/selectable = false
+item_2/disabled = true
+item_3/selectable = false
+item_3/disabled = true
+item_4/selectable = false
+item_4/disabled = true
+item_5/selectable = false
+item_5/disabled = true
+script = ExtResource("35_demvq")
+
+[node name="Cursor" type="TextureRect" parent="Panel"]
+unique_name_in_owner = true
+top_level = true
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 1
+offset_right = 32.0
+offset_bottom = 32.0
+pivot_offset = Vector2(-10, -10)
+size_flags_horizontal = 0
+size_flags_vertical = 0
+mouse_filter = 2
+expand_mode = 1
+
+[connection signal="focus_entered" from="Panel/Stack" to="Panel/Stack" method="_on_focus_entered"]
+[connection signal="focus_exited" from="Panel/Stack" to="Panel/Stack" method="_on_focus_exited"]
+[connection signal="text_changed" from="Panel/Stack" to="Panel/Stack" method="_on_text_changed"]
+[connection signal="text_submitted" from="Panel/Stack" to="Panel/Stack" method="_on_text_submitted"]
+[connection signal="item_selected" from="Panel/MainMenuBar/LPanel" to="Panel/MainMenuBar/LPanel" method="_on_item_selected"]
+[connection signal="item_selected" from="Panel/MainMenuBar/RPanel" to="Panel/MainMenuBar/RPanel" method="_on_item_selected"]
+[connection signal="pressed" from="Panel/Panels/LPanel/Alchemy/HBoxContainer/Runes1" to="Panel/Panels/RPanel/Adventure/VBoxContainer/MidContainer/VBoxContainer/Stats" method="_on_predict_pressed"]
+[connection signal="pressed" from="Panel/Panels/LPanel/Alchemy/HBoxContainer/Runes2" to="Panel/Panels/RPanel/Adventure/VBoxContainer/MidContainer/VBoxContainer/Stats" method="_on_start_pressed"]
+[connection signal="pressed" from="Panel/Panels/LPanel/Gear/Button" to="Panel/Panels/LPanel/Gear/Button" method="_on_pressed"]
+[connection signal="pressed" from="Panel/Panels/LPanel/Gear/StatsButton" to="Panel/Panels/LPanel/Gear" method="_on_stats_button_pressed"]
+[connection signal="pressed" from="Panel/Panels/LPanel/Gear/Axe" to="Panel/Panels/LPanel/Gear" method="_on_axe_pressed"]
+[connection signal="pressed" from="Panel/Panels/LPanel/Gear/Axe/ConfirmFire" to="Panel/Panels/LPanel/Gear" method="_on_confirm_fire_pressed"]
+[connection signal="timeout" from="Panel/Panels/LPanel/Gear/Axe/Timer" to="Panel/Panels/LPanel/Gear" method="_on_timer_timeout"]
+[connection signal="item_selected" from="Panel/Panels/RPanel/Adventure/VBoxContainer/MidContainer/Level" to="Panel/Panels/RPanel/Adventure/VBoxContainer/MidContainer/Level" method="_on_item_selected"]
+[connection signal="item_selected" from="Panel/Panels/RPanel/Adventure/VBoxContainer/MidContainer/Level" to="Panel/Panels/RPanel/Adventure/VBoxContainer/MidContainer/VBoxContainer/Stats" method="_on_level_item_selected"]
+[connection signal="pressed" from="Panel/Panels/RPanel/Adventure/VBoxContainer/BotContainer/Start" to="Panel/Panels/RPanel/Adventure/VBoxContainer/MidContainer/VBoxContainer/Stats" method="_on_start_pressed"]
+[connection signal="pressed" from="Panel/Panels/RPanel/Tavern/Tavern/Refresh" to="Panel/Panels/RPanel/Tavern/Tavern/Hires" method="_on_pressed"]
+[connection signal="gui_input" from="Panel/Panels/RPanel/Tavern/Tavern/Hire" to="Panel/Panels/RPanel/Tavern/Tavern/Hires" method="_on_add_hire_gui_input"]
+[connection signal="item_selected" from="Panel/Panels/RPanel/Tavern/Tavern/Hires" to="Panel/Panels/RPanel/Tavern/Tavern/Hires" method="_on_item_selected"]
+[connection signal="timeout" from="Panel/Panels/RPanel/Tavern/Tavern/TavernTimer" to="Panel/Panels/RPanel/Tavern/Tavern/Hires" method="_on_timer_timeout"]
+[connection signal="pressed" from="Panel/Panels/RPanel/Tavern/Reserves/Fire" to="Panel/Panels/RPanel/Tavern/Reserves/Hired" method="_on_terminate_pressed"]
+[connection signal="pressed" from="Panel/Panels/RPanel/Tavern/Reserves/Add" to="Panel/Panels/RPanel/Tavern/Reserves/Hired" method="_on_add_pressed"]
+[connection signal="item_selected" from="Panel/Panels/RPanel/Tavern/Reserves/Hired" to="Panel/Panels/RPanel/Tavern/Reserves/Hired" method="_on_item_selected"]
+[connection signal="item_clicked" from="Panel/PartyList" to="Panel/PartyList" method="_on_item_clicked"]
+[connection signal="item_selected" from="Panel/PartyList" to="Panel/PartyList" method="_on_item_selected"]
