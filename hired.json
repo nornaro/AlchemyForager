@@ -1,17 +1,39 @@
 {
+	"Dead": [
+		"Wyn Jadefire",
+		"Isara Nis Emberfall",
+		"Raxion Gus Lumina",
+		"Xylar Pa Kaleidos",
+		"Wrenna Ta Prismshade",
+		"Quorath Arc Ironveil",
+		"Sylas Mik Cinderheart",
+		"Brion Fara Ironclad",
+		"Haldorin Qr Frostforge",
+		"Ulric Lorn Xalren",
+		"Cirius Kel Eldergrove",
+		"Qirna Ira Xalorian",
+		"Thalor Thalior",
+		"Thalor Thalior",
+		"Ulric Lorn Xalren",
+		"Cirius Kel Eldergrove",
+		"Varex Jax Wyrmfang",
+		"Qirna Ira Xalorian",
+		"Haldorin Qr Frostforge",
+		"Sylara Quin Veilborn",
+		"Zan Lightrider",
+		"Li Raith",
+		"Vortex",
+		"Vespera Ryn Emberfall",
+		"Pyrion Kira Pyresoul",
+		"Zephyr Tov Thalior",
+		"Farion Umbrage",
+		"Lorn Mistral",
+		"Ce Icevein"
+	],
 	"Party1": [
-		"Jorin Rai",
-		"Quorath Er Emberfall",
-		"Sylas Tan Uraxis",
-		"Glarin",
-		"Orin Lumina"
+		"Quindor Nela"
 	],
 	"Party2": [],
 	"Party3": [],
-	"Reserve": [
-		"Sylas Tan Uraxis",
-		"Elwyn Pyr Lumina",
-		"Qyra Jadestrike",
-		"Xander Hym"
-	]
+	"Reserve": []
 }

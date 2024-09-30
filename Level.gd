@@ -4,34 +4,37 @@ var last = 1
 var step = 1000
 
 func _ready() -> void:
-	$"../../HBoxContainer1/Search".text = ""
-	$"../../HBoxContainer1/DropTier".text = ""
-
+	$"../../TopContainer/Search".text = ""
+	$"../../TopContainer/DropTier".text = ""
+	add_levels()
 
 func add_levels() -> void:
 	clear()
 	if last < 1:
 		last = 1
-	for i in range(last, last+9999):
-		if !$"../../HBoxContainer1/Search".text || str(i).containsn(str(!$"../../HBoxContainer1/Search".text)):
+	last = int(round(float(last) / 1000.0)) * 1000
+	for i in range(last, last+999):
+		if !$"../../TopContainer/Search".text || str(i).containsn(str(!$"../../TopContainer/Search".text)):
 			add_item(str(i).pad_zeros(9))
 
-	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Input.is_action_pressed("+1000"):
 		last += step
+		add_levels()
 	if Input.is_action_pressed("-1000"):
 		last -= step
+		add_levels()
 	if Input.is_action_pressed("+10000"):
 		last += step*10
+		add_levels()
 	if Input.is_action_pressed("-10000"):
 		last -= step*10
-	add_levels()
+		add_levels()
 
 
 func calculate_dungeon_difficulty(level: int) -> Dictionary:
-	var base_value: int = level
-	var extra_points: int = int(level * log(level + 1) / log(2)) - 5 * base_value
+	var base_value: float = level
+	var extra_points: int = round(level * log(level + 1) / log(2)) - 5 * base_value
 	
 	# Initialize with base values
 	var difficulty: Dictionary = {
@@ -67,7 +70,7 @@ func calculate_dungeon_difficulty(level: int) -> Dictionary:
 	var distributed_points: int = difficulty["COMP"] + difficulty["PATK"] + difficulty["PDEF"] + difficulty["MATK"] + difficulty["MDEF"]
 	
 	# Handle rounding error by calculating the difference and adding it to a random stat
-	var rounding_error: int = (base_value * 5 + extra_points) - distributed_points
+	var rounding_error: int = round(base_value * 5 + extra_points) - distributed_points
 	
 	if rounding_error > 0:
 		# Pick a random stat to add the rounding error

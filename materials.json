@@ -1,107 +1,166 @@
 {
-	"Ruby": {
-		"type": "Gem",
-		"hex": "#9B111E",
-		"use": "Passion, love, vitality, courage"
+	"Gem": {
+		"Ruby": {
+			"Count": 0,
+			"Type": ["", "Ruby", ""],
+			"hex": "#9B111E",
+			"type": "Gem",
+			"Modifier": []
+		},
+		"Emerald": {
+			"Count": 0,
+			"Type": ["", "Emerald", ""],
+			"hex": "#50C878",
+			"type": "Gem",
+			"Modifier": []
+		},
+		"Sapphire": {
+			"Count": 0,
+			"Type": ["", "Sapphire", ""],
+			"hex": "#0F52BA",
+			"type": "Gem",
+			"Modifier": []
+		},
+		"Diamond": {
+			"Count": 0,
+			"Type": ["", "Diamond", ""],
+			"hex": "#FFFFFF",
+			"type": "Gem",
+			"Modifier": []
+		},
+		"Topaz": {
+			"Count": 0,
+			"Type": ["", "Topaz", ""],
+			"hex": "#FFC87C",
+			"type": "Gem",
+			"Modifier": []
+		},
+		"Opal": {
+			"Count": 0,
+			"Type": ["", "Opal", ""],
+			"hex": "#A8C3BC",
+			"type": "Gem",
+			"Modifier": []
+		}
 	},
-	"Emerald": {
-		"type": "Gem",
-		"hex": "#50C878",
-		"use": "Love, wisdom, rebirth"
+	"Crystal": {
+		"Quartz": {
+			"Count": 0,
+			"Type": ["", "Quartz", ""],
+			"hex": "#E7ECEF",
+			"type": "Crystal",
+			"Modifier": []
+		},
+		"Amethyst": {
+			"Count": 0,
+			"Type": ["", "Amethyst", ""],
+			"hex": "#9966CC",
+			"type": "Crystal",
+			"Modifier": []
+		},
+		"Citrine": {
+			"Count": 0,
+			"Type": ["", "Citrine", ""],
+			"hex": "#E4D00A",
+			"type": "Crystal",
+			"Modifier": []
+		},
+		"Obsidian": {
+			"Count": 0,
+			"Type": ["", "Obsidian", ""],
+			"hex": "#0B0B0B",
+			"type": "Crystal",
+			"Modifier": []
+		}
 	},
-	"Sapphire": {
-		"type": "Gem",
-		"hex": "#0F52BA",
-		"use": "Wisdom, royalty, truth"
+	"Stone": {
+		"Moldavite": {
+			"Count": 0,
+			"Type": ["", "Moldavite", ""],
+			"hex": "#4A7023",
+			"type": "Stone",
+			"Modifier": []
+		},
+		"Black Tourmaline": {
+			"Count": 0,
+			"Type": ["", "Black Tourmaline", ""],
+			"hex": "#1E1E1E",
+			"type": "Stone",
+			"Modifier": []
+		},
+		"Bloodstone": {
+			"Count": 0,
+			"Type": ["", "Bloodstone", ""],
+			"hex": "#274E13",
+			"type": "Stone",
+			"Modifier": []
+		},
+		"Alexandrite": {
+			"Count": 0,
+			"Type": ["", "Alexandrite", ""],
+			"hex": "#3C8D0D",
+			"type": "Stone",
+			"Modifier": []
+		},
+		"Tanzanite": {
+			"Count": 0,
+			"Type": ["", "Tanzanite", ""],
+			"hex": "#7C83EE",
+			"type": "Stone",
+			"Modifier": []
+		}
 	},
-	"Diamond": {
-		"type": "Gem",
-		"hex": "#FFFFFF",
-		"use": "Purity, strength, eternity"
+	"Metal": {
+		"Iron": {
+			"Count": 0,
+			"Type": ["", "Iron", ""],
+			"hex": "#8A8A8A",
+			"type": "Metal",
+			"Modifier": []
+		},
+		"Steel": {
+			"Count": 0,
+			"Type": ["", "Steel", ""],
+			"hex": "#C0C0C0",
+			"type": "Metal",
+			"Modifier": []
+		},
+		"Titanium": {
+			"Count": 0,
+			"Type": ["", "Titanium", ""],
+			"hex": "#778899",
+			"type": "Metal",
+			"Modifier": []
+		},
+		"Mithril": {
+			"Count": 0,
+			"Type": ["", "Mithril", ""],
+			"hex": "#E5E4E2",
+			"type": "Metal",
+			"Modifier": []
+		},
+		"Tungsten": {
+			"Count": 0,
+			"Type": ["", "Tungsten", ""],
+			"hex": "#4B4B4B",
+			"type": "Metal",
+			"Modifier": []
+		},
+		"Adamantine": {
+			"Count": 0,
+			"Type": ["", "Adamantine", ""],
+			"hex": "#2F4F4F",
+			"type": "Metal",
+			"Modifier": []
+		}
 	},
-	"Topaz": {
-		"type": "Gem",
-		"hex": "#FFC87C",
-		"use": "Strength, confidence, abundance"
-	},
-	"Opal": {
-		"type": "Gem",
-		"hex": "#A8C3BC",
-		"use": "Inspiration, creativity, hope"
-	},
-	"Quartz": {
-		"type": "Crystal",
-		"hex": "#E7ECEF",
-		"use": "Clarity, healing, energy amplification"
-	},
-	"Amethyst": {
-		"type": "Crystal",
-		"hex": "#9966CC",
-		"use": "Intuition, protection, clarity"
-	},
-	"Citrine": {
-		"type": "Crystal",
-		"hex": "#E4D00A",
-		"use": "Abundance, success, joy"
-	},
-	"Obsidian": {
-		"type": "Crystal",
-		"hex": "#0B0B0B",
-		"use": "Protection, grounding, transformation"
-	},
-	"Moldavite": {
-		"type": "Stone",
-		"hex": "#4A7023",
-		"use": "Transformation, spiritual awakening"
-	},
-	"Black Tourmaline": {
-		"type": "Stone",
-		"hex": "#1E1E1E",
-		"use": "Protection, grounding, purification"
-	},
-	"Bloodstone": {
-		"type": "Stone",
-		"hex": "#274E13",
-		"use": "Courage, strength, vitality"
-	},
-	"Alexandrite": {
-		"type": "Stone",
-		"hex": "#3C8D0D",
-		"use": "Luck, balance, good fortune"
-	},
-	"Tanzanite": {
-		"type": "Stone",
-		"hex": "#7C83EE",
-		"use": "Transformation, higher consciousness"
-	},
-	"Iron": {
-		"type": "Metal",
-		"hex": "#8A8A8A",
-		"use": "Common weapon and armor material"
-	},
-	"Steel": {
-		"type": "Metal",
-		"hex": "#C0C0C0",
-		"use": "Standard for strong weapons and armor"
-	},
-	"Titanium": {
-		"type": "Metal",
-		"hex": "#778899",
-		"use": "Lightweight, durable, advanced armor"
-	},
-	"Mithril": {
-		"type": "Metal",
-		"hex": "#E5E4E2",
-		"use": "Lightweight, strong magical metal"
-	},
-	"Tungsten": {
-		"type": "Metal",
-		"hex": "#4B4B4B",
-		"use": "Heavy, dense, extremely tough metal"
-	},
-	"Adamantine": {
-		"type": "Metal",
-		"hex": "#2F4F4F",
-		"use": "Indestructible, legendary weapons and armor"
-	},
+	"Item": {
+		"Sickle": {
+			"Count": null,
+			"Modifiers": [],
+			"Type": ["", "Sickle", ""],
+			"hex": "#FFFFFF",
+			"type": "Item"
+		}
+	}
 }

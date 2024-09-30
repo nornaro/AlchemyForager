@@ -1,6 +1,8 @@
 extends Button
 
 @export var stats := {
+	"DEAD": false,
+	"GENDER": "",
 	"NAME": "",
 	"CLASS": "",
 	"EXP": "",

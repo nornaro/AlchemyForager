@@ -7,13 +7,10 @@ func _ready() -> void:
 	for party in Data.hired.keys():
 		if party == "Reserve":
 			continue
+		if party == "Dead":
+			continue
 		%Parties.get_node(party).show()
 	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
 
 
 func _on_pressed() -> void:

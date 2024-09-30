@@ -13,6 +13,7 @@ func _ready() -> void:
 func _on_item_selected(index: int) -> void:
 	idx = index
 	txt = get_item_text(index)
+	get_tree().call_group("Gear","hire",txt)
 
 
 func _on_add_pressed() -> void:

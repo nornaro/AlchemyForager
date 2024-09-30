@@ -1,11 +1,12 @@
-[gd_scene load_steps=44 format=3 uid="uid://cth6bsqd4gpyn"]
+[gd_scene load_steps=52 format=3 uid="uid://cth6bsqd4gpyn"]
 
 [ext_resource type="Texture2D" uid="uid://bucad8dmk4srd" path="res://BackGround.png" id="1_37c11"]
 [ext_resource type="Script" path="res://back_ground.gd" id="2_dspcp"]
 [ext_resource type="Texture2D" uid="uid://c6eky1mcihk0r" path="res://Button.png" id="2_tlkrj"]
 [ext_resource type="Texture2D" uid="uid://bkdb7kdkk5d2w" path="res://TeamButton.png" id="3_7phho"]
-[ext_resource type="Script" path="res://menu.gd" id="4_8yf8j"]
+[ext_resource type="Script" path="res://stack.gd" id="4_f3ok8"]
 [ext_resource type="Script" path="res://AddParty.gd" id="4_sj7y7"]
+[ext_resource type="Script" path="res://menu.gd" id="5_0nr4k"]
 [ext_resource type="Texture2D" uid="uid://dj2uf8qxss3n4" path="res://party1.png" id="5_4t1gk"]
 [ext_resource type="Script" path="res://members.gd" id="5_lh3rl"]
 [ext_resource type="Texture2D" uid="uid://yo1y8vqyvfvy" path="res://party2.png" id="6_binsk"]
@@ -13,33 +14,44 @@
 [ext_resource type="Texture2D" uid="uid://b6iaj3px1lyv" path="res://team3.png" id="7_rbf5e"]
 [ext_resource type="Texture2D" uid="uid://hbrfm0a5oqj3" path="res://Gear.png" id="8_2u02f"]
 [ext_resource type="Texture2D" uid="uid://3l6yde0wt1ka" path="res://team4.png" id="8_gkobl"]
-[ext_resource type="Script" path="res://alchemy.gd" id="9_d7w81"]
 [ext_resource type="Script" path="res://gear.gd" id="9_ftp8u"]
+[ext_resource type="Script" path="res://main.gd" id="9_nggfl"]
 [ext_resource type="Texture2D" uid="uid://dhcnmsqr0lo1x" path="res://team5.png" id="9_wsldj"]
 [ext_resource type="Texture2D" uid="uid://be6wcoljwhqsv" path="res://BodyF1.png" id="10_m7go5"]
 [ext_resource type="Script" path="res://addMember.gd" id="11_4mjc3"]
 [ext_resource type="Texture2D" uid="uid://bf1yw7rm3a88k" path="res://BodyM2.png" id="11_7wbgb"]
-[ext_resource type="Script" path="res://inventoryButton.gd" id="11_w8wfm"]
 [ext_resource type="Texture2D" uid="uid://dasvcrl7j4osl" path="res://Gender.png" id="12_5ltmi"]
 [ext_resource type="Texture2D" uid="uid://dbsipqgmpvdre" path="res://AddParty.png" id="12_7bsa7"]
 [ext_resource type="Script" path="res://button.gd" id="13_jgrad"]
 [ext_resource type="Texture2D" uid="uid://cwc8rugnrr508" path="res://Alchemic.png" id="14_at2sk"]
 [ext_resource type="Texture2D" uid="uid://s6iikqgapucq" path="res://Alchemi.png" id="16_gsnyb"]
+[ext_resource type="PackedScene" uid="uid://do4gcaqda1x7h" path="res://slot.tscn" id="16_mj57e"]
 [ext_resource type="Texture2D" uid="uid://dypmpbbtmimdr" path="res://Inventori.png" id="18_7ssj8"]
+[ext_resource type="Texture2D" uid="uid://cederngilp5h2" path="res://Snowflake.png" id="20_i11t0"]
 [ext_resource type="Texture2D" uid="uid://dvtwlrdchjm5o" path="res://Adventure.png" id="20_qpsp6"]
+[ext_resource type="Script" path="res://inventoryContainer.gd" id="21_irbow"]
+[ext_resource type="Texture2D" uid="uid://bmsas3lkdjldw" path="res://Apache.png" id="21_vvtoo"]
 [ext_resource type="Texture2D" uid="uid://diba3b3wgcjvx" path="res://crossed-axes.svg" id="22_gpp3w"]
+[ext_resource type="Texture2D" uid="uid://ckj5mdj1xdstu" path="res://Helicopter.png" id="22_tmhym"]
 [ext_resource type="Texture2D" uid="uid://cxm73bp73bi28" path="res://Tavern.png" id="24_bbuiu"]
-[ext_resource type="Script" path="res://adventure.gd" id="24_m11px"]
-[ext_resource type="Script" path="res://tavern.gd" id="25_2cu7b"]
-[ext_resource type="Texture2D" uid="uid://djaj1x015wcca" path="res://Reserves.png" id="29_5qdd0"]
-[ext_resource type="Script" path="res://reserves.gd" id="29_lqf37"]
 [ext_resource type="Texture2D" uid="uid://d25avquv1aujs" path="res://AdventureBox.png" id="30_sb2w3"]
 [ext_resource type="Script" path="res://Level.gd" id="31_24brd"]
 [ext_resource type="Script" path="res://drop_tier.gd" id="32_sjpkp"]
 [ext_resource type="Script" path="res://hires.gd" id="34_td7jr"]
 [ext_resource type="Script" path="res://debugstats.gd" id="37_swe2v"]
+[ext_resource type="Texture2D" uid="uid://b6bp8sowy7s0y" path="res://icon.svg" id="41_yb4g3"]
+[ext_resource type="Script" path="res://testing.gd" id="42_01b05"]
 [ext_resource type="Script" path="res://inventory.gd" id="42_tirer"]
+[ext_resource type="Script" path="res://cursor.gd" id="43_kmi6g"]
 [ext_resource type="Script" path="res://hired.gd" id="44_e2a1r"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wawb3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yasb4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kpyl1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oudkl"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_mooqk"]
 
@@ -59,6 +71,7 @@ size_flags_vertical = 3
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 2
+script = ExtResource("43_kmi6g")
 
 [node name="BackGround" type="TextureRect" parent="Panel"]
 layout_mode = 1
@@ -72,38 +85,30 @@ grow_vertical = 2
 texture = ExtResource("1_37c11")
 script = ExtResource("2_dspcp")
 
-[node name="Menu" type="Button" parent="Panel"]
+[node name="Menu" type="MenuButton" parent="Panel"]
 custom_minimum_size = Vector2(64, 64)
 layout_direction = 1
 layout_mode = 0
 offset_right = 96.0
 offset_bottom = 96.0
-focus_mode = 0
 icon = ExtResource("2_tlkrj")
-flat = true
 vertical_icon_alignment = 0
 expand_icon = true
-
-[node name="menu" type="ItemList" parent="Panel/Menu"]
-visible = false
-layout_mode = 1
-anchors_preset = -1
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 100.0
-offset_top = 5.0
-offset_right = 100.0
-offset_bottom = 40.0
-grow_horizontal = 2
-grow_vertical = 0
-auto_height = true
 item_count = 1
-item_0/text = "Exit"
-script = ExtResource("4_8yf8j")
+popup/item_0/text = "Exit"
+script = ExtResource("5_0nr4k")
 
-[node name="Main" type="VBoxContainer" parent="Panel"]
-layout_direction = 1
+[node name="Stack" type="LineEdit" parent="Panel" groups=["Stack"]]
+visible = false
+top_level = true
+layout_mode = 0
+offset_right = 100.0
+offset_bottom = 42.0
+context_menu_enabled = false
+structured_text_bidi_override = 6
+script = ExtResource("4_f3ok8")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -111,70 +116,40 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = -100.0
-offset_top = -254.0
-offset_bottom = 254.0
+offset_top = -208.5
+offset_bottom = 208.5
 grow_horizontal = 0
 grow_vertical = 2
+alignment = 1
 
-[node name="Alchemy" type="Button" parent="Panel/Main"]
-custom_minimum_size = Vector2(96, 96)
+[node name="LPanel" type="ItemList" parent="Panel/VBoxContainer"]
+light_mask = 0
 layout_direction = 1
 layout_mode = 2
 focus_mode = 0
-icon = ExtResource("16_gsnyb")
-flat = true
-icon_alignment = 1
-expand_icon = true
-script = ExtResource("9_d7w81")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_wawb3")
+allow_reselect = true
+auto_height = true
+item_count = 1
+item_0/text = "Alchemy"
+item_0/icon = ExtResource("16_gsnyb")
+script = ExtResource("9_nggfl")
 
-[node name="Inventory" type="Button" parent="Panel/Main"]
-texture_repeat = 1
-custom_minimum_size = Vector2(96, 96)
-layout_direction = 1
+[node name="RPanel" type="ItemList" parent="Panel/VBoxContainer"]
+light_mask = 0
 layout_mode = 2
 focus_mode = 0
-icon = ExtResource("18_7ssj8")
-flat = true
-icon_alignment = 1
-expand_icon = true
-script = ExtResource("11_w8wfm")
-
-[node name="Adventure" type="Button" parent="Panel/Main"]
-texture_repeat = 1
-custom_minimum_size = Vector2(100, 100)
-layout_direction = 1
-layout_mode = 2
-focus_mode = 0
-icon = ExtResource("20_qpsp6")
-flat = true
-icon_alignment = 1
-expand_icon = true
-script = ExtResource("24_m11px")
-
-[node name="Tavern" type="Button" parent="Panel/Main"]
-texture_repeat = 1
-custom_minimum_size = Vector2(100, 100)
-layout_direction = 1
-layout_mode = 2
-focus_mode = 0
-icon = ExtResource("24_bbuiu")
-flat = true
-icon_alignment = 1
-expand_icon = true
-script = ExtResource("25_2cu7b")
-
-[node name="Reserves" type="Button" parent="Panel/Main"]
-visible = false
-texture_repeat = 1
-custom_minimum_size = Vector2(100, 100)
-layout_direction = 1
-layout_mode = 2
-focus_mode = 0
-icon = ExtResource("29_5qdd0")
-flat = true
-icon_alignment = 1
-expand_icon = true
-script = ExtResource("29_lqf37")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_yasb4")
+allow_reselect = true
+auto_height = true
+item_count = 3
+item_0/text = "Inventory"
+item_0/icon = ExtResource("18_7ssj8")
+item_1/text = "Adventure"
+item_1/icon = ExtResource("20_qpsp6")
+item_2/text = "Tavern"
+item_2/icon = ExtResource("24_bbuiu")
+script = ExtResource("9_nggfl")
 
 [node name="Camera2D" type="Camera2D" parent="Panel"]
 anchor_mode = 0
@@ -208,58 +183,193 @@ self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Alchemic" type="TextureRect" parent="Panel/Panel/HBoxContainer/LPanel" groups=["LPanel"]]
+[node name="Alchemy" type="TextureRect" parent="Panel/Panel/HBoxContainer/LPanel" groups=["LPanel"]]
 unique_name_in_owner = true
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("14_at2sk")
 expand_mode = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Panel/Panel/HBoxContainer/LPanel/Alchemic"]
+[node name="Alchemy" type="Panel" parent="Panel/Panel/HBoxContainer/LPanel/Alchemy"]
+custom_minimum_size = Vector2(70, 0)
 layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_kpyl1")
+script = ExtResource("42_tirer")
+
+[node name="0" parent="Panel/Panel/HBoxContainer/LPanel/Alchemy/Alchemy" instance=ExtResource("16_mj57e")]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.0
+offset_top = -40.0
+offset_right = 32.0
+offset_bottom = 30.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_oudkl")
+
+[node name="1" parent="Panel/Panel/HBoxContainer/LPanel/Alchemy/Alchemy" instance=ExtResource("16_mj57e")]
+layout_mode = 2
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 348.0
+offset_top = 108.0
+offset_right = 418.0
+offset_bottom = 178.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_oudkl")
+
+[node name="2" parent="Panel/Panel/HBoxContainer/LPanel/Alchemy/Alchemy" instance=ExtResource("16_mj57e")]
+layout_mode = 2
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 386.0
+offset_top = 207.0
+offset_right = 456.0
+offset_bottom = 277.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_oudkl")
+
+[node name="3" parent="Panel/Panel/HBoxContainer/LPanel/Alchemy/Alchemy" instance=ExtResource("16_mj57e")]
+layout_mode = 2
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 352.0
+offset_top = 300.0
+offset_right = 422.0
+offset_bottom = 370.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_oudkl")
+
+[node name="4" parent="Panel/Panel/HBoxContainer/LPanel/Alchemy/Alchemy" instance=ExtResource("16_mj57e")]
+layout_mode = 2
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 235.0
+offset_top = 352.0
+offset_right = 305.0
+offset_bottom = 422.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_oudkl")
+
+[node name="5" parent="Panel/Panel/HBoxContainer/LPanel/Alchemy/Alchemy" instance=ExtResource("16_mj57e")]
+layout_mode = 2
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 118.0
+offset_top = 301.0
+offset_right = 188.0
+offset_bottom = 371.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_oudkl")
+
+[node name="6" parent="Panel/Panel/HBoxContainer/LPanel/Alchemy/Alchemy" instance=ExtResource("16_mj57e")]
+layout_mode = 2
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 82.0
+offset_top = 206.0
+offset_right = 152.0
+offset_bottom = 276.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_oudkl")
+
+[node name="7" parent="Panel/Panel/HBoxContainer/LPanel/Alchemy/Alchemy" instance=ExtResource("16_mj57e")]
+layout_mode = 2
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 114.0
+offset_top = 110.0
+offset_right = 184.0
+offset_bottom = 180.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_oudkl")
+
+[node name="8" parent="Panel/Panel/HBoxContainer/LPanel/Alchemy/Alchemy" instance=ExtResource("16_mj57e")]
+layout_mode = 2
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 237.0
+offset_top = 68.0
+offset_right = 307.0
+offset_bottom = 138.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_oudkl")
+
+[node name="9" parent="Panel/Panel/HBoxContainer/LPanel/Alchemy/Alchemy" instance=ExtResource("16_mj57e")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -74.0
+offset_top = -75.0
+offset_right = -4.0
+offset_bottom = -5.0
+scale = Vector2(2, 2)
+theme_override_styles/panel = SubResource("StyleBoxEmpty_oudkl")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/Panel/HBoxContainer/LPanel/Alchemy"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -273.0
+offset_top = -42.0
+offset_right = 275.0
+grow_horizontal = 2
 grow_vertical = 0
 
-[node name="Panel2" type="Panel" parent="Panel/Panel/HBoxContainer/LPanel/Alchemic/HBoxContainer"]
+[node name="Panel2" type="Panel" parent="Panel/Panel/HBoxContainer/LPanel/Alchemy/HBoxContainer"]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Runes1" type="Button" parent="Panel/Panel/HBoxContainer/LPanel/Alchemic/HBoxContainer"]
+[node name="Runes1" type="Button" parent="Panel/Panel/HBoxContainer/LPanel/Alchemy/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
 theme_override_font_sizes/font_size = 24
 text = " "
 
-[node name="Panel3" type="RichTextLabel" parent="Panel/Panel/HBoxContainer/LPanel/Alchemic/HBoxContainer"]
+[node name="Panel3" type="RichTextLabel" parent="Panel/Panel/HBoxContainer/LPanel/Alchemy/HBoxContainer"]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 text = " "
 fit_content = true
 
-[node name="Runes2" type="Button" parent="Panel/Panel/HBoxContainer/LPanel/Alchemic/HBoxContainer"]
+[node name="Runes2" type="Button" parent="Panel/Panel/HBoxContainer/LPanel/Alchemy/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
 theme_override_font_sizes/font_size = 24
 text = " "
 
-[node name="Panel" type="Panel" parent="Panel/Panel/HBoxContainer/LPanel/Alchemic/HBoxContainer"]
+[node name="Panel" type="Panel" parent="Panel/Panel/HBoxContainer/LPanel/Alchemy/HBoxContainer"]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Gear" type="TextureRect" parent="Panel/Panel/HBoxContainer/LPanel" groups=["Gear"]]
+[node name="Gear" type="TextureRect" parent="Panel/Panel/HBoxContainer/LPanel" groups=["Gear", "LPanel"]]
+unique_name_in_owner = true
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -270,7 +380,7 @@ texture = ExtResource("8_2u02f")
 expand_mode = 1
 script = ExtResource("9_ftp8u")
 
-[node name="BodyF" type="TextureRect" parent="Panel/Panel/HBoxContainer/LPanel/Gear"]
+[node name="BodyFemale" type="TextureRect" parent="Panel/Panel/HBoxContainer/LPanel/Gear" groups=["Body"]]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -282,7 +392,8 @@ texture = ExtResource("10_m7go5")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="BodyM" type="TextureRect" parent="Panel/Panel/HBoxContainer/LPanel/Gear"]
+[node name="BodyMale" type="TextureRect" parent="Panel/Panel/HBoxContainer/LPanel/Gear" groups=["Body"]]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -290,6 +401,42 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("11_7wbgb")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="BodySnowflake" type="TextureRect" parent="Panel/Panel/HBoxContainer/LPanel/Gear" groups=["Body"]]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("20_i11t0")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="BodyApache" type="TextureRect" parent="Panel/Panel/HBoxContainer/LPanel/Gear" groups=["Body"]]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("21_vvtoo")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="BodyHelicopter" type="TextureRect" parent="Panel/Panel/HBoxContainer/LPanel/Gear" groups=["Body"]]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("22_tmhym")
 expand_mode = 2
 stretch_mode = 5
 
@@ -304,9 +451,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -124.0
-offset_top = -200.0
+offset_top = -246.0
 offset_right = 126.0
-offset_bottom = 200.0
+offset_bottom = 248.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("PlaceholderTexture2D_mooqk")
@@ -337,6 +484,7 @@ offset_top = 15.0
 offset_right = -92.0
 offset_bottom = 47.0
 grow_horizontal = 2
+focus_mode = 0
 toggle_mode = true
 icon = ExtResource("12_5ltmi")
 flat = true
@@ -375,6 +523,7 @@ offset_top = -32.0
 offset_right = 16.0
 grow_horizontal = 2
 grow_vertical = 0
+focus_mode = 0
 icon = ExtResource("22_gpp3w")
 icon_alignment = 1
 expand_icon = true
@@ -393,6 +542,7 @@ offset_top = -31.0
 offset_right = 112.0
 grow_horizontal = 0
 grow_vertical = 0
+focus_mode = 0
 text = "Remove"
 
 [node name="Timer" type="Timer" parent="Panel/Panel/HBoxContainer/LPanel/Gear/Axe"]
@@ -416,44 +566,38 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 tab_alignment = 1
-current_tab = 1
+current_tab = 0
+tab_focus_mode = 0
+script = ExtResource("21_irbow")
 
-[node name="Inventory" type="GridContainer" parent="Panel/Panel/HBoxContainer/RPanel/Inventory"]
-visible = false
+[node name="Item" type="GridContainer" parent="Panel/Panel/HBoxContainer/RPanel/Inventory"]
 layout_mode = 2
 theme = SubResource("Theme_obnsp")
-theme_override_constants/h_separation = -100
-theme_override_constants/v_separation = -5
-columns = 8
+columns = 5
 script = ExtResource("42_tirer")
 metadata/_tab_index = 0
 
 [node name="Gem" type="GridContainer" parent="Panel/Panel/HBoxContainer/RPanel/Inventory"]
-layout_mode = 2
-theme = SubResource("Theme_obnsp")
-theme_override_constants/h_separation = -100
-theme_override_constants/v_separation = -5
-columns = 8
-script = ExtResource("42_tirer")
-metadata/_tab_index = 1
-
-[node name="Stone" type="GridContainer" parent="Panel/Panel/HBoxContainer/RPanel/Inventory"]
 visible = false
 layout_mode = 2
 theme = SubResource("Theme_obnsp")
-theme_override_constants/h_separation = -100
-theme_override_constants/v_separation = -5
-columns = 8
+columns = 10
 script = ExtResource("42_tirer")
-metadata/_tab_index = 2
+metadata/_tab_index = 1
 
 [node name="Crystal" type="GridContainer" parent="Panel/Panel/HBoxContainer/RPanel/Inventory"]
 visible = false
 layout_mode = 2
 theme = SubResource("Theme_obnsp")
-theme_override_constants/h_separation = -100
-theme_override_constants/v_separation = -5
-columns = 8
+columns = 10
+script = ExtResource("42_tirer")
+metadata/_tab_index = 2
+
+[node name="Stone" type="GridContainer" parent="Panel/Panel/HBoxContainer/RPanel/Inventory"]
+visible = false
+layout_mode = 2
+theme = SubResource("Theme_obnsp")
+columns = 10
 script = ExtResource("42_tirer")
 metadata/_tab_index = 3
 
@@ -461,13 +605,11 @@ metadata/_tab_index = 3
 visible = false
 layout_mode = 2
 theme = SubResource("Theme_obnsp")
-theme_override_constants/h_separation = -100
-theme_override_constants/v_separation = -5
-columns = 8
+columns = 10
 script = ExtResource("42_tirer")
 metadata/_tab_index = 4
 
-[node name="Adventure" type="TextureRect" parent="Panel/Panel/HBoxContainer/RPanel"]
+[node name="Adventure" type="TextureRect" parent="Panel/Panel/HBoxContainer/RPanel" groups=["RPanel"]]
 unique_name_in_owner = true
 visible = false
 layout_mode = 1
@@ -496,15 +638,19 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="HBoxContainer1" type="HBoxContainer" parent="Panel/Panel/HBoxContainer/RPanel/Adventure/VBoxContainer"]
+[node name="Panel" type="Panel" parent="Panel/Panel/HBoxContainer/RPanel/Adventure/VBoxContainer"]
+custom_minimum_size = Vector2(0, 35)
 layout_mode = 2
 
-[node name="Search" type="RichTextLabel" parent="Panel/Panel/HBoxContainer/RPanel/Adventure/VBoxContainer/HBoxContainer1"]
+[node name="TopContainer" type="HBoxContainer" parent="Panel/Panel/HBoxContainer/RPanel/Adventure/VBoxContainer"]
+layout_mode = 2
+
+[node name="Search" type="RichTextLabel" parent="Panel/Panel/HBoxContainer/RPanel/Adventure/VBoxContainer/TopContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = " "
 
-[node name="DropTier" type="RichTextLabel" parent="Panel/Panel/HBoxContainer/RPanel/Adventure/VBoxContainer/HBoxContainer1"]
+[node name="DropTier" type="RichTextLabel" parent="Panel/Panel/HBoxContainer/RPanel/Adventure/VBoxContainer/TopContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/normal_font_size = 32
@@ -513,60 +659,95 @@ text = " "
 fit_content = true
 script = ExtResource("32_sjpkp")
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/Panel/HBoxContainer/RPanel/Adventure/VBoxContainer"]
+[node name="MidContainer" type="HBoxContainer" parent="Panel/Panel/HBoxContainer/RPanel/Adventure/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Panel2" type="Panel" parent="Panel/Panel/HBoxContainer/RPanel/Adventure/VBoxContainer/HBoxContainer2"]
+[node name="Panel2" type="Panel" parent="Panel/Panel/HBoxContainer/RPanel/Adventure/VBoxContainer/MidContainer"]
 custom_minimum_size = Vector2(20, 0)
 layout_mode = 2
 
-[node name="Level" type="ItemList" parent="Panel/Panel/HBoxContainer/RPanel/Adventure/VBoxContainer/HBoxContainer2"]
+[node name="Level" type="ItemList" parent="Panel/Panel/HBoxContainer/RPanel/Adventure/VBoxContainer/MidContainer"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 size_flags_horizontal = 3
+focus_mode = 0
 theme_override_font_sizes/font_size = 24
 allow_reselect = true
 max_text_lines = 8
 script = ExtResource("31_24brd")
 
-[node name="Stats" type="RichTextLabel" parent="Panel/Panel/HBoxContainer/RPanel/Adventure/VBoxContainer/HBoxContainer2"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/Panel/HBoxContainer/RPanel/Adventure/VBoxContainer/MidContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+
+[node name="Stats" type="RichTextLabel" parent="Panel/Panel/HBoxContainer/RPanel/Adventure/VBoxContainer/MidContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme_override_font_sizes/normal_font_size = 24
 bbcode_enabled = true
 script = ExtResource("37_swe2v")
 
-[node name="Panel" type="Panel" parent="Panel/Panel/HBoxContainer/RPanel/Adventure/VBoxContainer/HBoxContainer2"]
+[node name="Result" type="RichTextLabel" parent="Panel/Panel/HBoxContainer/RPanel/Adventure/VBoxContainer/MidContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+
+[node name="VBoxContainer" type="HBoxContainer" parent="Panel/Panel/HBoxContainer/RPanel/Adventure/VBoxContainer/MidContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Prediction" type="TextEdit" parent="Panel/Panel/HBoxContainer/RPanel/Adventure/VBoxContainer/MidContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Prediction:"
+editable = false
+scroll_fit_content_height = true
+
+[node name="Predict" type="RichTextLabel" parent="Panel/Panel/HBoxContainer/RPanel/Adventure/VBoxContainer/MidContainer/VBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = " "
+fit_content = true
+
+[node name="Panel" type="Panel" parent="Panel/Panel/HBoxContainer/RPanel/Adventure/VBoxContainer/MidContainer"]
 custom_minimum_size = Vector2(20, 0)
 layout_mode = 2
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="Panel/Panel/HBoxContainer/RPanel/Adventure/VBoxContainer"]
+[node name="BotContainer" type="HBoxContainer" parent="Panel/Panel/HBoxContainer/RPanel/Adventure/VBoxContainer"]
 layout_mode = 2
 
-[node name="Panel2" type="Panel" parent="Panel/Panel/HBoxContainer/RPanel/Adventure/VBoxContainer/HBoxContainer3"]
+[node name="Panel2" type="Panel" parent="Panel/Panel/HBoxContainer/RPanel/Adventure/VBoxContainer/BotContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Predict" type="Button" parent="Panel/Panel/HBoxContainer/RPanel/Adventure/VBoxContainer/HBoxContainer3"]
+[node name="Predict" type="Button" parent="Panel/Panel/HBoxContainer/RPanel/Adventure/VBoxContainer/BotContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+focus_mode = 0
 theme_override_font_sizes/font_size = 24
 text = "Predict"
+flat = true
 
-[node name="Panel3" type="RichTextLabel" parent="Panel/Panel/HBoxContainer/RPanel/Adventure/VBoxContainer/HBoxContainer3"]
+[node name="Panel3" type="RichTextLabel" parent="Panel/Panel/HBoxContainer/RPanel/Adventure/VBoxContainer/BotContainer"]
 layout_mode = 2
 text = " "
 fit_content = true
 
-[node name="Start" type="Button" parent="Panel/Panel/HBoxContainer/RPanel/Adventure/VBoxContainer/HBoxContainer3"]
+[node name="Start" type="Button" parent="Panel/Panel/HBoxContainer/RPanel/Adventure/VBoxContainer/BotContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+focus_mode = 0
 theme_override_font_sizes/font_size = 24
 text = "Start
 "
+flat = true
 
-[node name="Panel" type="Panel" parent="Panel/Panel/HBoxContainer/RPanel/Adventure/VBoxContainer/HBoxContainer3"]
+[node name="Panel" type="Panel" parent="Panel/Panel/HBoxContainer/RPanel/Adventure/VBoxContainer/BotContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -594,6 +775,7 @@ offset_right = 144.0
 offset_bottom = 492.0
 focus_mode = 0
 text = "Refresh"
+flat = true
 
 [node name="Hire" type="Button" parent="Panel/Panel/HBoxContainer/RPanel/Tavern/Tavern"]
 layout_mode = 0
@@ -605,6 +787,7 @@ tooltip_text = "RMB adds directly"
 focus_mode = 0
 button_mask = 3
 text = "Hire"
+flat = true
 
 [node name="Hires" type="ItemList" parent="Panel/Panel/HBoxContainer/RPanel/Tavern/Tavern"]
 custom_minimum_size = Vector2(250, 0)
@@ -620,9 +803,16 @@ offset_bottom = -48.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
+focus_mode = 0
 theme_override_font_sizes/font_size = 16
+allow_reselect = true
 max_text_lines = 8
 script = ExtResource("34_td7jr")
+
+[node name="TavernTimer" type="Timer" parent="Panel/Panel/HBoxContainer/RPanel/Tavern/Tavern"]
+unique_name_in_owner = true
+wait_time = 60.0
+autostart = true
 
 [node name="Reserves" type="TextureRect" parent="Panel/Panel/HBoxContainer/RPanel/Tavern"]
 unique_name_in_owner = true
@@ -648,6 +838,7 @@ offset_right = 221.0
 offset_bottom = 493.0
 focus_mode = 0
 text = "Add"
+flat = true
 
 [node name="Hired" type="ItemList" parent="Panel/Panel/HBoxContainer/RPanel/Tavern/Reserves"]
 custom_minimum_size = Vector2(250, 0)
@@ -663,7 +854,9 @@ offset_bottom = -47.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
+focus_mode = 0
 theme_override_font_sizes/font_size = 16
+allow_reselect = true
 max_text_lines = 8
 script = ExtResource("44_e2a1r")
 
@@ -673,6 +866,8 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
+offset_left = -1.0
+offset_right = -1.0
 grow_vertical = 2
 script = ExtResource("5_lh3rl")
 
@@ -899,28 +1094,48 @@ flat = true
 expand_icon = true
 script = ExtResource("4_sj7y7")
 
-[connection signal="pressed" from="Panel/Menu" to="Panel/Menu/menu" method="_on_menu_pressed"]
-[connection signal="item_clicked" from="Panel/Menu/menu" to="Panel/Menu/menu" method="_on_item_clicked"]
-[connection signal="pressed" from="Panel/Main/Alchemy" to="Panel/Main/Alchemy" method="_on_pressed"]
-[connection signal="pressed" from="Panel/Main/Inventory" to="Panel/Main/Inventory" method="_on_pressed"]
-[connection signal="pressed" from="Panel/Main/Adventure" to="Panel/Main/Adventure" method="_on_pressed"]
-[connection signal="pressed" from="Panel/Main/Tavern" to="Panel/Main/Tavern" method="_on_pressed"]
-[connection signal="pressed" from="Panel/Main/Reserves" to="Panel/Main/Reserves" method="_on_pressed"]
-[connection signal="pressed" from="Panel/Panel/HBoxContainer/LPanel/Alchemic/HBoxContainer/Runes1" to="Panel/Panel/HBoxContainer/RPanel/Adventure/VBoxContainer/HBoxContainer2/Stats" method="_on_predict_pressed"]
-[connection signal="pressed" from="Panel/Panel/HBoxContainer/LPanel/Alchemic/HBoxContainer/Runes2" to="Panel/Panel/HBoxContainer/RPanel/Adventure/VBoxContainer/HBoxContainer2/Stats" method="_on_start_pressed"]
+[node name="Cursor" type="TextureRect" parent="Panel"]
+unique_name_in_owner = true
+top_level = true
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 1
+offset_right = 32.0
+offset_bottom = 32.0
+pivot_offset = Vector2(-10, -10)
+size_flags_horizontal = 0
+size_flags_vertical = 0
+mouse_filter = 2
+expand_mode = 1
+
+[node name="Button" type="Button" parent="."]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+icon = ExtResource("41_yb4g3")
+flat = true
+script = ExtResource("42_01b05")
+
+[connection signal="focus_entered" from="Panel/Stack" to="Panel/Stack" method="_on_focus_entered"]
+[connection signal="focus_exited" from="Panel/Stack" to="Panel/Stack" method="_on_focus_exited"]
+[connection signal="text_changed" from="Panel/Stack" to="Panel/Stack" method="_on_text_changed"]
+[connection signal="text_submitted" from="Panel/Stack" to="Panel/Stack" method="_on_text_submitted"]
+[connection signal="item_selected" from="Panel/VBoxContainer/LPanel" to="Panel/VBoxContainer/LPanel" method="_on_item_selected"]
+[connection signal="item_selected" from="Panel/VBoxContainer/RPanel" to="Panel/VBoxContainer/RPanel" method="_on_item_selected"]
+[connection signal="pressed" from="Panel/Panel/HBoxContainer/LPanel/Alchemy/HBoxContainer/Runes1" to="Panel/Panel/HBoxContainer/RPanel/Adventure/VBoxContainer/MidContainer/VBoxContainer/Stats" method="_on_predict_pressed"]
+[connection signal="pressed" from="Panel/Panel/HBoxContainer/LPanel/Alchemy/HBoxContainer/Runes2" to="Panel/Panel/HBoxContainer/RPanel/Adventure/VBoxContainer/MidContainer/VBoxContainer/Stats" method="_on_start_pressed"]
 [connection signal="pressed" from="Panel/Panel/HBoxContainer/LPanel/Gear/Button" to="Panel/Panel/HBoxContainer/LPanel/Gear/Button" method="_on_pressed"]
 [connection signal="pressed" from="Panel/Panel/HBoxContainer/LPanel/Gear/StatsButton" to="Panel/Panel/HBoxContainer/LPanel/Gear" method="_on_stats_button_pressed"]
 [connection signal="pressed" from="Panel/Panel/HBoxContainer/LPanel/Gear/Axe" to="Panel/Panel/HBoxContainer/LPanel/Gear" method="_on_axe_pressed"]
 [connection signal="pressed" from="Panel/Panel/HBoxContainer/LPanel/Gear/Axe/ConfirmFire" to="Panel/Panel/HBoxContainer/LPanel/Gear" method="_on_confirm_fire_pressed"]
 [connection signal="timeout" from="Panel/Panel/HBoxContainer/LPanel/Gear/Axe/Timer" to="Panel/Panel/HBoxContainer/LPanel/Gear" method="_on_timer_timeout"]
-[connection signal="item_selected" from="Panel/Panel/HBoxContainer/RPanel/Adventure/VBoxContainer/HBoxContainer2/Level" to="Panel/Panel/HBoxContainer/RPanel/Adventure/VBoxContainer/HBoxContainer1/DropTier" method="_on_level_item_selected"]
-[connection signal="item_selected" from="Panel/Panel/HBoxContainer/RPanel/Adventure/VBoxContainer/HBoxContainer2/Level" to="Panel/Panel/HBoxContainer/RPanel/Adventure/VBoxContainer/HBoxContainer2/Level" method="_on_item_selected"]
-[connection signal="item_selected" from="Panel/Panel/HBoxContainer/RPanel/Adventure/VBoxContainer/HBoxContainer2/Level" to="Panel/Panel/HBoxContainer/RPanel/Adventure/VBoxContainer/HBoxContainer2/Stats" method="_on_level_item_selected"]
-[connection signal="pressed" from="Panel/Panel/HBoxContainer/RPanel/Adventure/VBoxContainer/HBoxContainer3/Predict" to="Panel/Panel/HBoxContainer/RPanel/Adventure/VBoxContainer/HBoxContainer2/Stats" method="_on_predict_pressed"]
-[connection signal="pressed" from="Panel/Panel/HBoxContainer/RPanel/Adventure/VBoxContainer/HBoxContainer3/Start" to="Panel/Panel/HBoxContainer/RPanel/Adventure/VBoxContainer/HBoxContainer2/Stats" method="_on_start_pressed"]
+[connection signal="item_selected" from="Panel/Panel/HBoxContainer/RPanel/Adventure/VBoxContainer/MidContainer/Level" to="Panel/Panel/HBoxContainer/RPanel/Adventure/VBoxContainer/MidContainer/Level" method="_on_item_selected"]
+[connection signal="item_selected" from="Panel/Panel/HBoxContainer/RPanel/Adventure/VBoxContainer/MidContainer/Level" to="Panel/Panel/HBoxContainer/RPanel/Adventure/VBoxContainer/MidContainer/VBoxContainer/Stats" method="_on_level_item_selected"]
+[connection signal="pressed" from="Panel/Panel/HBoxContainer/RPanel/Adventure/VBoxContainer/BotContainer/Start" to="Panel/Panel/HBoxContainer/RPanel/Adventure/VBoxContainer/MidContainer/VBoxContainer/Stats" method="_on_start_pressed"]
 [connection signal="pressed" from="Panel/Panel/HBoxContainer/RPanel/Tavern/Tavern/Refresh" to="Panel/Panel/HBoxContainer/RPanel/Tavern/Tavern/Hires" method="_on_pressed"]
 [connection signal="gui_input" from="Panel/Panel/HBoxContainer/RPanel/Tavern/Tavern/Hire" to="Panel/Panel/HBoxContainer/RPanel/Tavern/Tavern/Hires" method="_on_add_hire_gui_input"]
-[connection signal="pressed" from="Panel/Panel/HBoxContainer/RPanel/Tavern/Tavern/Hire" to="Panel/Panel/HBoxContainer/RPanel/Tavern/Tavern/Hires" method="_on_hire_pressed"]
+[connection signal="item_selected" from="Panel/Panel/HBoxContainer/RPanel/Tavern/Tavern/Hires" to="Panel/Panel/HBoxContainer/RPanel/Tavern/Tavern/Hires" method="_on_item_selected"]
+[connection signal="timeout" from="Panel/Panel/HBoxContainer/RPanel/Tavern/Tavern/TavernTimer" to="Panel/Panel/HBoxContainer/RPanel/Tavern/Tavern/Hires" method="_on_timer_timeout"]
 [connection signal="pressed" from="Panel/Panel/HBoxContainer/RPanel/Tavern/Reserves/Fire" to="Panel/Panel/HBoxContainer/RPanel/Tavern/Reserves/Hired" method="_on_terminate_pressed"]
 [connection signal="pressed" from="Panel/Panel/HBoxContainer/RPanel/Tavern/Reserves/Add" to="Panel/Panel/HBoxContainer/RPanel/Tavern/Reserves/Hired" method="_on_add_pressed"]
 [connection signal="item_selected" from="Panel/Panel/HBoxContainer/RPanel/Tavern/Reserves/Hired" to="Panel/Panel/HBoxContainer/RPanel/Tavern/Reserves/Hired" method="_on_item_selected"]
@@ -932,3 +1147,4 @@ script = ExtResource("4_sj7y7")
 [connection signal="pressed" from="Panel/Parties/Party5" to="Panel/Members/Party5" method="_on_pressed"]
 [connection signal="pressed" from="Panel/Parties/Party6" to="Panel/Members/Party6" method="_on_pressed"]
 [connection signal="pressed" from="Panel/Parties/Add" to="Panel/Parties/Add" method="_on_pressed"]
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

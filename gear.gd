@@ -1,6 +1,5 @@
 extends TextureRect
 
-var float_in = false
 var hired = ""
 var statsVisibility = 0
 
@@ -11,12 +10,12 @@ func _ready() -> void:
 
 func hire(hirename) -> void:
 	if hired == hirename:
-		float_in = false
+		hide()
 		hired = ""
 		$Stats.text = ""
 		return
 	if hired == "":
-		float_in = true
+		show()
 	hired = hirename
 	$Stats.text = "[center]"
 	$Stats.text += str(Data.hires[hirename]["NAME"])+"\n"
@@ -28,18 +27,11 @@ func hire(hirename) -> void:
 	$Stats.text += "MATK: " + str(Data.hires[hirename]["MATK"])+"\n"
 	$Stats.text += "MDEF: " + str(Data.hires[hirename]["MDEF"])+"\n"
 	$Stats.text += "[/center]"
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	if float_in && position.x < 0:
-		position.x += 200
-	if !float_in && position.x > -700:
-		position.x -= 200
+	get_tree().call_group("Body","hide")
+	get_node("Body"+Data.hires[hirename]["GENDER"]).show()
 
 
 func _on_stats_button_pressed() -> void:
-	print(statsVisibility)
 	statsVisibility += 1
 	if statsVisibility == 3:
 		statsVisibility = 0
@@ -62,11 +54,18 @@ func _on_axe_pressed() -> void:
 
 func _on_confirm_fire_pressed() -> void:
 	$Axe/ConfirmFire.hide()
+	fire(false)
+	
+	
+func fire(kill: bool):
 	if !Data.hired[Data.party].has(hired):
 		return
 	if %Members.get_node_or_null(Data.party+"/"+hired):
 		%Members.get_node(Data.party+"/"+hired).queue_free()
-	Data.hired.Reserve.append(hired)
+	if !kill:
+		Data.hired.Reserve.append(hired)
+	if kill:
+		Data.hired.Dead.append(hired)
 	for i in range(Data.hired[Data.party].size()-1):
 		if Data.hired[str(Data.party)][i] != hired:
 			continue

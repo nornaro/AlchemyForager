@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvx8ugoe6aa70"
-path="res://.godot/imported/Designer (1).png-1ce454823f61a2011517fa909167edd9.ctex"
+uid="uid://cf3hhjksd6k6n"
+path="res://.godot/imported/Alchemibup.png-4a97cf22085bfe1dd591b226a5a22004.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Designer (1).png"
-dest_files=["res://.godot/imported/Designer (1).png-1ce454823f61a2011517fa909167edd9.ctex"]
+source_file="res://Alchemibup.png"
+dest_files=["res://.godot/imported/Alchemibup.png-4a97cf22085bfe1dd591b226a5a22004.ctex"]
 
 [params]
 

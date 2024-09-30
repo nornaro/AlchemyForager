@@ -1,0 +1,34 @@
+[gd_scene load_steps=2 format=3 uid="uid://ba8tnawihp6qb"]
+
+[ext_resource type="Script" path="res://item.gd" id="1_lw2ne"]
+
+[node name="Item" type="TextureRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("1_lw2ne")
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -33.5313
+offset_top = -31.0
+offset_right = 33.5313
+grow_horizontal = 2
+grow_vertical = 0
+focus_mode = 0
+mouse_filter = 2
+alignment = 1
+editable = false
+flat = true
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="text_submitted" from="LineEdit" to="." method="_on_line_edit_text_submitted"]

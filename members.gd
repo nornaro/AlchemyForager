@@ -9,6 +9,8 @@ var Mage = preload("res://Mage.png")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	for party in Data.hired.keys():
+		if party == "Dead":
+			continue
 		if party == "Reserve":
 			continue
 		if party == "Add":

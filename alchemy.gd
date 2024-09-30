@@ -1,9 +1,6 @@
 extends Button
 
 func _on_pressed() -> void:
-	if !%"Alchemic".visible:
-		%"Alchemic".visible = true
-		%"Inventory".visible = true
-		return
-	%"Alchemic".visible = false
-	%"Inventory".visible = false
+	get_tree().call_group("RPanel","hide")
+	%"Alchemy".visible = true
+	%"Inventory".visible = true
