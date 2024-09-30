@@ -1,4 +1,4 @@
-extends PopupMenu
+extends MenuButton
 
 
 # Called when the node enters the scene tree for the first time.
@@ -19,7 +19,7 @@ func _on_menu_pressed() -> void:
 	show()
 
 
-func _on_item_clicked(index: int, at_position: Vector2, mouse_button_index: int) -> void:
-	match get_item_text(index):
-		"Exit":
-			get_tree().quit()
+#func _on_item_clicked(index: int, at_position: Vector2, mouse_button_index: int) -> void:
+	#match get_item_text(index):
+		#"Exit":
+			#get_tree().quit()

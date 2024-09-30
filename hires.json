@@ -2,7 +2,7 @@
 	"Brion Fara Ironclad": {
 		"CLASS": "Mage",
 		"COMP": 1,
-		"DEAD": false,
+		"PARTY": false,
 		"EXP": 1,
 		"GEAR": {
 			"Armor": 0,

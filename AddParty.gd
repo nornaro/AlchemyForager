@@ -20,7 +20,7 @@ func _on_pressed() -> void:
 		hide()
 	if Data.Zeny >= cost:
 		Data.Zeny -= cost
-		Data.hired["Party"+str(party_count)] = []
+		Data.db.update_rows("Party","id ="+str(party_count),{"active": true})
 		get_node("../Party"+str(party_count)).show()
 		tooltip_text = "Cost: " + str(pow(100,party_count)) + "z"
 

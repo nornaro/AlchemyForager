@@ -6,8 +6,8 @@ var txt: String
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	clear()
-	for hire in Data.hired.Reserve:
-		add_item(hire)
+	for hire in Data.db.select_rows("Adventurer","party != 'Dead' AND party != 'Reserve' AND party != 'free'",["name"]):
+		add_item(hire.name)
 
 
 func _on_item_selected(index: int) -> void:

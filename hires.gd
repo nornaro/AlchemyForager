@@ -1,47 +1,20 @@
 extends ItemList
 
-@export var stats := {
-	"DEAD": false,
-	"GENDER": "",
-	"NAME": "",
-	"CLASS": "",
-	"EXP": 1,
-	"LVL": 1,
-	"COMP": 1,
-	"PATK": 1,
-	"PDEF": 1,
-	"MATK": 1,
-	"MDEF": 1,
-	"GEAR": {
-		"Head": 0,
-		"shoulder": 0,
-		"Armor": 0,
-		"wrist": 0,
-		"Feet": 0,
-		"Main": 0,
-		"Side": 0,
-		"Potion1": 0,
-		"Potion2": 0,
-		"Potion3": 0,
-	}
-}
 
 # Called when the node enters the scene tree for the first time.
 func pick() -> void:
 	var hire
 	var hires = get_items()
-	if Data.hires.keys().size():
-		hire = Data.hires[Data.hires.keys().pick_random()]
-	if !Data.hires.keys().size() || randi_range(0,100) == 0:
-		hire = new_hire()
+	var adventurers = Data.db.select_rows("Adventurer", "party = 'free'", ["name"])
+	if adventurers.size() == 0:
+		new_hire()
+		return
+	hire = adventurers.pick_random().name
 	if !hire:
-		hire = new_hire()
-	if hire["NAME"] in hires:
 		return
-	if contains_name(hire["NAME"]):
+	if hire in hires:
 		return
-	hires.append(hire["NAME"])
-	add_item(hire["NAME"])
+	add_item(hire)
 
 func get_items() -> Array:
 	var items = []
@@ -56,35 +29,32 @@ func contains_name(nodeName: String) -> bool:
 	return false
 
 
-func new_hire() -> Dictionary:
-	var hire = stats.duplicate(true)
+func new_hire() -> void:
+	var hire = {}
+	hire["name"] = ""
 	if randi_range(0,5) != 0:
-		hire["NAME"] += Data.names.first.pick_random()
+		hire["name"] += Data.names.first.pick_random()
 	if randi_range(0,5) != 0:
-		if hire["NAME"] != "":
-			hire["NAME"] += " "
-		hire["NAME"] += Data.names.middle.pick_random()
+		if hire["name"] != "":
+			hire["name"] += " "
+		hire["name"] += Data.names.middle.pick_random()
 	if randi_range(0,5) != 0:
-		if hire["NAME"] != "":
-			hire["NAME"] += " "
-		hire["NAME"] += Data.names.last.pick_random()
+		if hire["name"] != "":
+			hire["name"] += " "
+		hire["name"] += Data.names.last.pick_random()
 	var genderrand = randi_range(0,100)
 	if genderrand > 50:
-		hire["GENDER"] = "Female"
+		hire["gender"] = "Female"
 	if genderrand < 50:
-		hire["GENDER"] = "Male"
+		hire["gender"] = "Male"
 	if genderrand == 0:
-		hire["GENDER"] = "Apache"
+		hire["gender"] = "Apache"
 	if genderrand == 50:
-		hire["GENDER"] = "Snowflake"
+		hire["gender"] = "Snowflake"
 	if genderrand == 100:
-		hire["GENDER"] = "Helicopter"
-	if Data.hires.has(hire["NAME"]):
-		return {}
-	hire["CLASS"] = Data.classes.pick_random()
-	Data.hires[hire["NAME"]] = hire
-	Data.write("hires")
-	return hire
+		hire["gender"] = "Helicopter"
+	hire["class"] = Data.classes.pick_random()
+	Data.db.insert_row("Adventurer",hire)
 
 
 func _on_pressed() -> void:
@@ -108,7 +78,6 @@ func _on_add_hire_gui_input(event: InputEvent) -> void:
 		add_member(hirename)
 	if event.button_index == MOUSE_BUTTON_LEFT:
 		Data.hired.Reserve.append(hirename)
-	Data.write("hired")
 	remove_item(get_selected_items()[0])
 	$"../../Reserves/Hired"._ready()
 

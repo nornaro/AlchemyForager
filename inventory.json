@@ -4,15 +4,7 @@
 
 		},
 		{
-			"Count": 50,
-			"Type": [
-				"Medium",
-				"Sapphire",
-				"B"
-			],
-			"hex": "#0F52BA",
-			"type": "Gem",
-			"use": "Wisdom, royalty, truth"
+
 		},
 		{
 
@@ -325,7 +317,15 @@
 
 		},
 		{
-
+			"Count": 50,
+			"Type": [
+				"Medium",
+				"Sapphire",
+				"B"
+			],
+			"hex": "#0F52BA",
+			"type": "Gem",
+			"use": "Wisdom, royalty, truth"
 		},
 		{
 

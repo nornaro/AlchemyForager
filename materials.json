@@ -1,166 +1,200 @@
-{
-	"Gem": {
-		"Ruby": {
-			"Count": 0,
-			"Type": ["", "Ruby", ""],
-			"hex": "#9B111E",
-			"type": "Gem",
-			"Modifier": []
-		},
-		"Emerald": {
-			"Count": 0,
-			"Type": ["", "Emerald", ""],
-			"hex": "#50C878",
-			"type": "Gem",
-			"Modifier": []
-		},
-		"Sapphire": {
-			"Count": 0,
-			"Type": ["", "Sapphire", ""],
-			"hex": "#0F52BA",
-			"type": "Gem",
-			"Modifier": []
-		},
-		"Diamond": {
-			"Count": 0,
-			"Type": ["", "Diamond", ""],
-			"hex": "#FFFFFF",
-			"type": "Gem",
-			"Modifier": []
-		},
-		"Topaz": {
-			"Count": 0,
-			"Type": ["", "Topaz", ""],
-			"hex": "#FFC87C",
-			"type": "Gem",
-			"Modifier": []
-		},
-		"Opal": {
-			"Count": 0,
-			"Type": ["", "Opal", ""],
-			"hex": "#A8C3BC",
-			"type": "Gem",
-			"Modifier": []
-		}
+[
+	{
+		"type": "Gem",
+		"attribute": "",
+		"name": "Ruby",
+		"quality": "",
+		"count": "0",
+		"modifiers": "",
+		"color": "#9B111E"
 	},
-	"Crystal": {
-		"Quartz": {
-			"Count": 0,
-			"Type": ["", "Quartz", ""],
-			"hex": "#E7ECEF",
-			"type": "Crystal",
-			"Modifier": []
-		},
-		"Amethyst": {
-			"Count": 0,
-			"Type": ["", "Amethyst", ""],
-			"hex": "#9966CC",
-			"type": "Crystal",
-			"Modifier": []
-		},
-		"Citrine": {
-			"Count": 0,
-			"Type": ["", "Citrine", ""],
-			"hex": "#E4D00A",
-			"type": "Crystal",
-			"Modifier": []
-		},
-		"Obsidian": {
-			"Count": 0,
-			"Type": ["", "Obsidian", ""],
-			"hex": "#0B0B0B",
-			"type": "Crystal",
-			"Modifier": []
-		}
+	{
+		"type": "Gem",
+		"attribute": "",
+		"name": "Emerald",
+		"quality": "",
+		"count": "0",
+		"modifiers": "",
+		"color": "#50C878"
 	},
-	"Stone": {
-		"Moldavite": {
-			"Count": 0,
-			"Type": ["", "Moldavite", ""],
-			"hex": "#4A7023",
-			"type": "Stone",
-			"Modifier": []
-		},
-		"Black Tourmaline": {
-			"Count": 0,
-			"Type": ["", "Black Tourmaline", ""],
-			"hex": "#1E1E1E",
-			"type": "Stone",
-			"Modifier": []
-		},
-		"Bloodstone": {
-			"Count": 0,
-			"Type": ["", "Bloodstone", ""],
-			"hex": "#274E13",
-			"type": "Stone",
-			"Modifier": []
-		},
-		"Alexandrite": {
-			"Count": 0,
-			"Type": ["", "Alexandrite", ""],
-			"hex": "#3C8D0D",
-			"type": "Stone",
-			"Modifier": []
-		},
-		"Tanzanite": {
-			"Count": 0,
-			"Type": ["", "Tanzanite", ""],
-			"hex": "#7C83EE",
-			"type": "Stone",
-			"Modifier": []
-		}
+	{
+		"type": "Gem",
+		"attribute": "",
+		"name": "Sapphire",
+		"quality": "",
+		"count": "0",
+		"modifiers": "",
+		"color": "#0F52BA"
 	},
-	"Metal": {
-		"Iron": {
-			"Count": 0,
-			"Type": ["", "Iron", ""],
-			"hex": "#8A8A8A",
-			"type": "Metal",
-			"Modifier": []
-		},
-		"Steel": {
-			"Count": 0,
-			"Type": ["", "Steel", ""],
-			"hex": "#C0C0C0",
-			"type": "Metal",
-			"Modifier": []
-		},
-		"Titanium": {
-			"Count": 0,
-			"Type": ["", "Titanium", ""],
-			"hex": "#778899",
-			"type": "Metal",
-			"Modifier": []
-		},
-		"Mithril": {
-			"Count": 0,
-			"Type": ["", "Mithril", ""],
-			"hex": "#E5E4E2",
-			"type": "Metal",
-			"Modifier": []
-		},
-		"Tungsten": {
-			"Count": 0,
-			"Type": ["", "Tungsten", ""],
-			"hex": "#4B4B4B",
-			"type": "Metal",
-			"Modifier": []
-		},
-		"Adamantine": {
-			"Count": 0,
-			"Type": ["", "Adamantine", ""],
-			"hex": "#2F4F4F",
-			"type": "Metal",
-			"Modifier": []
-		}
+	{
+		"type": "Gem",
+		"attribute": "",
+		"name": "Diamond",
+		"quality": "",
+		"count": "0",
+		"modifiers": "",
+		"color": "#FFFFFF"
 	},
-	"Item": {
-		"Sickle": {
-			"Count": null,
-			"Modifiers": [],
-			"Type": ["", "Sickle", ""],
-			"hex": "#FFFFFF",
-			"type": "Item"
-		}
+	{
+		"type": "Gem",
+		"attribute": "",
+		"name": "Topaz",
+		"quality": "",
+		"count": "0",
+		"modifiers": "",
+		"color": "#FFC87C"
+	},
+	{
+		"type": "Gem",
+		"attribute": "",
+		"name": "Opal",
+		"quality": "",
+		"count": "0",
+		"modifiers": "",
+		"color": "#A8C3BC"
+	},
+	{
+		"type": "Crystal",
+		"attribute": "",
+		"name": "Quartz",
+		"quality": "",
+		"count": "0",
+		"modifiers": "",
+		"color": "#E7ECEF"
+	},
+	{
+		"type": "Crystal",
+		"attribute": "",
+		"name": "Amethyst",
+		"quality": "",
+		"count": "0",
+		"modifiers": "",
+		"color": "#9966CC"
+	},
+	{
+		"type": "Crystal",
+		"attribute": "",
+		"name": "Citrine",
+		"quality": "",
+		"count": "0",
+		"modifiers": "",
+		"color": "#E4D00A"
+	},
+	{
+		"type": "Crystal",
+		"attribute": "",
+		"name": "Obsidian",
+		"quality": "",
+		"count": "0",
+		"modifiers": "",
+		"color": "#0B0B0B"
+	},
+	{
+		"type": "Stone",
+		"attribute": "",
+		"name": "Moldavite",
+		"quality": "",
+		"count": "0",
+		"modifiers": "",
+		"color": "#4A7023"
+	},
+	{
+		"type": "Stone",
+		"attribute": "",
+		"name": "Black Tourmaline",
+		"quality": "",
+		"count": "0",
+		"modifiers": "",
+		"color": "#1E1E1E"
+	},
+	{
+		"type": "Stone",
+		"attribute": "",
+		"name": "Bloodstone",
+		"quality": "",
+		"count": "0",
+		"modifiers": "",
+		"color": "#274E13"
+	},
+	{
+		"type": "Stone",
+		"attribute": "",
+		"name": "Alexandrite",
+		"quality": "",
+		"count": "0",
+		"modifiers": "",
+		"color": "#3C8D0D"
+	},
+	{
+		"type": "Stone",
+		"attribute": "",
+		"name": "Tanzanite",
+		"quality": "",
+		"count": "0",
+		"modifiers": "",
+		"color": "#7C83EE"
+	},
+	{
+		"type": "Metal",
+		"attribute": "",
+		"name": "Iron",
+		"quality": "",
+		"count": "0",
+		"modifiers": "",
+		"color": "#8A8A8A"
+	},
+	{
+		"type": "Metal",
+		"attribute": "",
+		"name": "Steel",
+		"quality": "",
+		"count": "0",
+		"modifiers": "",
+		"color": "#C0C0C0"
+	},
+	{
+		"type": "Metal",
+		"attribute": "",
+		"name": "Titanium",
+		"quality": "",
+		"count": "0",
+		"modifiers": "",
+		"color": "#778899"
+	},
+	{
+		"type": "Metal",
+		"attribute": "",
+		"name": "Mithril",
+		"quality": "",
+		"count": "0",
+		"modifiers": "",
+		"color": "#E5E4E2"
+	},
+	{
+		"type": "Metal",
+		"attribute": "",
+		"name": "Tungsten",
+		"quality": "",
+		"count": "0",
+		"modifiers": "",
+		"color": "#4B4B4B"
+	},
+	{
+		"type": "Metal",
+		"attribute": "",
+		"name": "Adamantine",
+		"quality": "",
+		"count": "0",
+		"modifiers": "",
+		"color": "#2F4F4F"
+	},
+	{
+		"type": "Item",
+		"attribute": "",
+		"name": "Sickle",
+		"quality": "",
+		"count": "null",
+		"modifiers": "",
+		"color": "#FFFFFF"
 	}
-}
+]

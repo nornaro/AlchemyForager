@@ -31,6 +31,10 @@ window/vsync/vsync_mode=0
 
 project/assembly_name="Alchemy Forager"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot-sqlite/plugin.cfg")
+
 [input]
 
 +1000={

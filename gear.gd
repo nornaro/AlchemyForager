@@ -18,7 +18,7 @@ func hire(hirename) -> void:
 		show()
 	hired = hirename
 	$Stats.text = "[center]"
-	$Stats.text += str(Data.hires[hirename]["NAME"])+"\n"
+	$Stats.text += hirename+"\n"
 	$Stats.text += "Lelevl: 1 - " + str(Data.hires[hirename]["CLASS"])+"\n\n"
 	$Stats.text += "Exp: " + str(Data.hires[hirename]["EXP"])+"\n"
 	$Stats.text += "COMP: " + str(Data.hires[hirename]["COMP"])+"\n"

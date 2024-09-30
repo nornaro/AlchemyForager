@@ -10,13 +10,11 @@ func _ready() -> void:
 	call_deferred("_initialize_inventory")
 
 func auto_add(item: Dictionary):
-	for slot in Data.inventory.get(name).size():
-		if slot == 0:
-			continue
-		if add(slot, item):
-			return
+	if Data.db.select_rows(name,"name = "+item.name+"and attribute = "+item.attribute,["id"])[0]:
+		pass
+	add(Data.db.select_rows(name,"name != null",["id"])[0], item)
 	
-func add(slot:int, item: Dictionary) -> bool:
+func add(slot: int, item: Dictionary) -> bool:
 	if !Data.inventory.get(name)[slot].has("Type"):
 		Data.inventory.get(name)[slot] = item
 		add_item_node(slot,item)
@@ -47,15 +45,11 @@ func remove(slot: int, item: Dictionary) -> bool:
 	return true
 
 
-func add_item_node(slot: int, item: Dictionary):
+func add_item_node(slot:int ,item: Dictionary):
 	var iteminstance = itemscene.instantiate()
 	iteminstance.name = Data.join(item.Type)
 	iteminstance.item = item
-	var texture
-	if item.type == "Item":
-		iteminstance.texture = Data.textures.get(item.Type[1])
-	if item.type != "Item":
-		iteminstance.texture = Data.textures.get(item.Type[0]+item.type)
+	iteminstance.texture = Data.textures.get(item.attribute+item.name)
 	iteminstance.self_modulate = Color(item.hex)
 	iteminstance.count(item.Count)
 	iteminstance.tooltip_text = Data.join(item.Type)
@@ -73,5 +67,5 @@ func _initialize_inventory() -> void:
 			slotinstance.name = str(i)
 			slotinstance.scale = Vector2(scaleslot,scaleslot)
 			add_child(slotinstance)
-		if Data.inventory.get(name)[i].has("Type"):
-			add_item_node(i,Data.inventory.get(name)[i])
+	for item in Data.db.select_rows(name,"",["*"]):
+		add_item_node(item.id,item)
