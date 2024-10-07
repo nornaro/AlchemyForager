@@ -228,6 +228,7 @@ size_flags_horizontal = 3
 
 [node name="Gear" type="TextureRect" parent="Panel/Panels/LPanel" groups=["Gear", "LPanel"]]
 unique_name_in_owner = true
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -409,6 +410,10 @@ wait_time = 5.0
 [node name="Equipment" parent="Panel/Panels/LPanel/Gear" instance=ExtResource("24_gm2lr")]
 layout_mode = 0
 anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
 
 [node name="RPanel" type="Panel" parent="Panel/Panels"]
 self_modulate = Color(1, 1, 1, 0)
@@ -473,6 +478,7 @@ metadata/_tab_index = 4
 
 [node name="Adventure" type="TextureRect" parent="Panel/Panels/RPanel" groups=["RPanel"]]
 unique_name_in_owner = true
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
