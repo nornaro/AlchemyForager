@@ -28,7 +28,6 @@ func cancel_stack():
 
 func edit_name():
 	$LineEdit.editable = true
-	print($LineEdit.editable)
 	$LineEdit.grab_focus()
 
 func _on_gui_input(event: InputEvent) -> void:

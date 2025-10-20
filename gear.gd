@@ -1,6 +1,6 @@
 extends TextureRect
 
-var hired = ""
+var hired:String = ""
 var statsVisibility = 0
 
 func _ready() -> void:
@@ -54,29 +54,39 @@ func _on_axe_pressed() -> void:
 	$Axe/ConfirmFire.show()
 
 
-func _on_confirm_fire_pressed() -> void:
+func _on_confirm_axe_pressed() -> void:
 	$Axe/ConfirmFire.hide()
 	fire(false)
 	
 	
 func fire(kill: bool):
-	if !Data.hired[Data.party].has(hired):
+	if hired == "":
+		return # nothing selected
+	
+	# Remove the member node from the party UI if it exists
+	var member_node_path = Data.party + "/" + hired
+	var member_node = %Members.get_node_or_null(member_node_path)
+	if member_node:
+		member_node.queue_free()
+	
+	# Fetch the adventurer row
+	var adventurer_rows = Data.db.select_rows("Adventurer", "name = '" + hired + "'", ["*"])
+	if adventurer_rows.size() == 0:
+		hired = ""
 		return
-	if %Members.get_node_or_null(Data.party+"/"+hired):
-		%Members.get_node(Data.party+"/"+hired).queue_free()
-	if !kill:
-		Data.hired.Reserve.append(hired)
+	
+	var adventurer = adventurer_rows[0]
+	
 	if kill:
-		Data.hired.Dead.append(hired)
-	for i in range(Data.hired[Data.party].size()-1):
-		if Data.hired[str(Data.party)][i] != hired:
-			continue
-		Data.hired[str(Data.party)].remove_at(i)
-	if Data.hired[Data.party].size() == 1:
-		Data.hired[Data.party].clear()
-	Data.hired[Data.party].erase(hired)
-	Data.write("hired")
-	%"Reserves/Hired"._ready()
+		adventurer["party"] = "Dead"
+		adventurer["lvl"] = -abs(adventurer["lvl"])
+		Data.db.update_rows("Adventurer", "id = " + str(adventurer["id"]), adventurer)
+		return
+	Data.db.update_rows("Adventurer", "id = " + str(adventurer["id"]), {"party": "free"})
+	if %Hired.has_node(hired):
+		%Hired.get_node(hired).queue_free()
+	%Hired.add_item(hired)
+	%Hires.add_item(hired)
 	
 func _on_timer_timeout() -> void:
 	$Axe/ConfirmFire.hide()

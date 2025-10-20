@@ -5,7 +5,9 @@ extends ItemList
 func pick() -> void:
 	var hire
 	var hires = get_items()
-	var adventurers = Data.db.select_rows("Adventurer", "party = 'free'", ["name"])
+	if !Data.db:
+		return
+	var adventurers:Array = Data.db.select_rows("Adventurer", "party = 'free'", ["name"])
 	if adventurers.size() == 0:
 		new_hire()
 		return
@@ -21,13 +23,6 @@ func get_items() -> Array:
 	for i in range(get_item_count()):
 		items.append(get_item_text(i))
 	return items
-
-func contains_name(nodeName: String) -> bool:
-	for sublist in Data.hired.values():
-		if nodeName in sublist:
-			return true
-	return false
-
 
 func new_hire() -> void:
 	var hire = {}
@@ -79,7 +74,7 @@ func _on_add_hire_gui_input(event: InputEvent) -> void:
 	if event.button_index == MOUSE_BUTTON_LEFT:
 		Data.db.update_rows("Adventurer","name = '"+hirename+"'",{"party":"Reserve"})
 	remove_item(get_selected_items()[0])
-	$"../../Reserves/Hired".add_item(hirename)
+	%Hired.add_item(hirename)
 
 func add_member(hirename) -> void:
 	var scene = load("res://Scenes/member.tscn")
@@ -92,7 +87,3 @@ func add_member(hirename) -> void:
 
 func _on_item_selected(index: int) -> void:
 	get_tree().call_group("Gear","hire",get_item_text(index))
-
-
-func _on_timer_timeout() -> void:
-	pick()

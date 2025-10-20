@@ -1,40 +1,40 @@
-[gd_scene load_steps=42 format=3 uid="uid://cth6bsqd4gpyn"]
+[gd_scene load_steps=43 format=3 uid="uid://cth6bsqd4gpyn"]
 
 [ext_resource type="Texture2D" uid="uid://bkltg02rxjnlk" path="res://BackGround.png" id="1_37c11"]
-[ext_resource type="Script" path="res://back_ground.gd" id="2_dspcp"]
+[ext_resource type="Script" uid="uid://ycoq5a0byysp" path="res://back_ground.gd" id="2_dspcp"]
 [ext_resource type="Texture2D" uid="uid://ckpnds4qc7v8j" path="res://Button.png" id="2_tlkrj"]
-[ext_resource type="Script" path="res://stack.gd" id="4_f3ok8"]
-[ext_resource type="Script" path="res://menu.gd" id="5_0nr4k"]
+[ext_resource type="Script" uid="uid://b3krl3ojnhph8" path="res://stack.gd" id="4_f3ok8"]
+[ext_resource type="Script" uid="uid://bydkdrfmsmskn" path="res://menu.gd" id="5_0nr4k"]
 [ext_resource type="Texture2D" uid="uid://l7a0u7u20t7k" path="res://Gear.png" id="8_2u02f"]
-[ext_resource type="Script" path="res://gear.gd" id="9_ftp8u"]
-[ext_resource type="Script" path="res://main.gd" id="9_nggfl"]
+[ext_resource type="Script" uid="uid://2qlfaq5nuv57" path="res://gear.gd" id="9_ftp8u"]
+[ext_resource type="Script" uid="uid://ckgsf602mh3ty" path="res://main.gd" id="9_nggfl"]
 [ext_resource type="Texture2D" uid="uid://cgxjwf3h1tllb" path="res://BodyF1.png" id="10_m7go5"]
 [ext_resource type="Texture2D" uid="uid://danxxjjeaxvfe" path="res://BodyM2.png" id="11_7wbgb"]
 [ext_resource type="Texture2D" uid="uid://6hewh2osgv1u" path="res://Gender.png" id="12_5ltmi"]
 [ext_resource type="Texture2D" uid="uid://cusqo8yqhw25x" path="res://AddParty.png" id="12_7bsa7"]
-[ext_resource type="Script" path="res://button.gd" id="13_jgrad"]
+[ext_resource type="Script" uid="uid://bj476qm68jyov" path="res://button.gd" id="13_jgrad"]
 [ext_resource type="PackedScene" uid="uid://c4g8tge2ql06b" path="res://Scenes/alchemy.tscn" id="13_q4grf"]
 [ext_resource type="Texture2D" uid="uid://c3aj0jkjrrkhh" path="res://Alchemic.png" id="14_at2sk"]
 [ext_resource type="Texture2D" uid="uid://bg2ewsg24g80t" path="res://Alchemi.png" id="16_gsnyb"]
 [ext_resource type="Texture2D" uid="uid://fp0menuffyny" path="res://Inventori.png" id="18_7ssj8"]
 [ext_resource type="Texture2D" uid="uid://blhaoey4jrmnu" path="res://Snowflake.png" id="20_i11t0"]
 [ext_resource type="Texture2D" uid="uid://cui1pwej8wx3y" path="res://Adventure.png" id="20_qpsp6"]
-[ext_resource type="Script" path="res://inventoryContainer.gd" id="21_irbow"]
+[ext_resource type="Script" uid="uid://csst73lyh003u" path="res://inventoryContainer.gd" id="21_irbow"]
 [ext_resource type="Texture2D" uid="uid://cj42hlf4ab8jo" path="res://Apache.png" id="21_vvtoo"]
 [ext_resource type="Texture2D" uid="uid://lxyj3t3ma0f7" path="res://crossed-axes.svg" id="22_gpp3w"]
 [ext_resource type="Texture2D" uid="uid://budlvni2t1kyt" path="res://Helicopter.png" id="22_tmhym"]
 [ext_resource type="Texture2D" uid="uid://dmes1mkr14epl" path="res://Tavern.png" id="24_bbuiu"]
 [ext_resource type="PackedScene" uid="uid://j1a3yteb8swm" path="res://Scenes/equipment.tscn" id="24_gm2lr"]
 [ext_resource type="Texture2D" uid="uid://dwvqkilygm6cr" path="res://AdventureBox.png" id="30_sb2w3"]
-[ext_resource type="Script" path="res://Level.gd" id="31_24brd"]
-[ext_resource type="Script" path="res://drop_tier.gd" id="32_sjpkp"]
+[ext_resource type="Script" uid="uid://browagr8w8fxi" path="res://Level.gd" id="31_24brd"]
+[ext_resource type="Script" uid="uid://cs8jvab6xwnju" path="res://drop_tier.gd" id="32_sjpkp"]
 [ext_resource type="PackedScene" uid="uid://c6pwgar5n53cx" path="res://Scenes/members.tscn" id="33_mpsr4"]
-[ext_resource type="Script" path="res://hires.gd" id="34_td7jr"]
-[ext_resource type="Script" path="res://party_list.gd" id="35_demvq"]
-[ext_resource type="Script" path="res://debugstats.gd" id="37_swe2v"]
-[ext_resource type="Script" path="res://inventory.gd" id="42_tirer"]
-[ext_resource type="Script" path="res://cursor.gd" id="43_kmi6g"]
-[ext_resource type="Script" path="res://hired.gd" id="44_e2a1r"]
+[ext_resource type="Script" uid="uid://by1adivqaj07e" path="res://hires.gd" id="34_td7jr"]
+[ext_resource type="Script" uid="uid://c36vy5mywcv0p" path="res://party_list.gd" id="35_demvq"]
+[ext_resource type="Script" uid="uid://1fbpt57kibav" path="res://debugstats.gd" id="37_swe2v"]
+[ext_resource type="Script" uid="uid://du2sev1gkhndu" path="res://inventory.gd" id="42_tirer"]
+[ext_resource type="Script" uid="uid://dqf4rejwy4bkt" path="res://cursor.gd" id="43_kmi6g"]
+[ext_resource type="Script" uid="uid://cqbqp65yy8mq1" path="res://hired.gd" id="44_e2a1r"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wawb3"]
 
@@ -46,6 +46,8 @@
 default_font_size = 16
 
 [sub_resource type="Theme" id="Theme_obnsp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x3rx7"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fhrne"]
 
@@ -85,6 +87,7 @@ vertical_icon_alignment = 0
 expand_icon = true
 item_count = 1
 popup/item_0/text = "Exit"
+popup/item_0/id = 0
 script = ExtResource("5_0nr4k")
 
 [node name="Stack" type="LineEdit" parent="Panel" groups=["Stack"]]
@@ -240,6 +243,7 @@ expand_mode = 1
 script = ExtResource("9_ftp8u")
 
 [node name="BodyFemale" type="TextureRect" parent="Panel/Panels/LPanel/Gear" groups=["Body"]]
+unique_name_in_owner = true
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -252,6 +256,7 @@ expand_mode = 2
 stretch_mode = 5
 
 [node name="BodyMale" type="TextureRect" parent="Panel/Panels/LPanel/Gear" groups=["Body"]]
+unique_name_in_owner = true
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -264,6 +269,7 @@ expand_mode = 2
 stretch_mode = 5
 
 [node name="BodySnowflake" type="TextureRect" parent="Panel/Panels/LPanel/Gear" groups=["Body"]]
+unique_name_in_owner = true
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -276,6 +282,7 @@ expand_mode = 2
 stretch_mode = 5
 
 [node name="BodyApache" type="TextureRect" parent="Panel/Panels/LPanel/Gear" groups=["Body"]]
+unique_name_in_owner = true
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -288,6 +295,7 @@ expand_mode = 2
 stretch_mode = 5
 
 [node name="BodyHelicopter" type="TextureRect" parent="Panel/Panels/LPanel/Gear" groups=["Body"]]
+unique_name_in_owner = true
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -478,7 +486,6 @@ metadata/_tab_index = 4
 
 [node name="Adventure" type="TextureRect" parent="Panel/Panels/RPanel" groups=["RPanel"]]
 unique_name_in_owner = true
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -625,7 +632,6 @@ layout_mode = 2
 
 [node name="Tavern" type="HBoxContainer" parent="Panel/Panels/RPanel" groups=["RPanel"]]
 unique_name_in_owner = true
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -639,52 +645,76 @@ size_flags_horizontal = 3
 texture = ExtResource("30_sb2w3")
 expand_mode = 1
 
-[node name="Refresh" type="Button" parent="Panel/Panels/RPanel/Tavern/Tavern"]
-layout_mode = 0
-offset_left = 61.0
-offset_top = 501.0
-offset_right = 131.0
-offset_bottom = 551.0
-focus_mode = 0
-text = "Refresh"
-flat = true
+[node name="TavernTimer" type="Timer" parent="Panel/Panels/RPanel/Tavern/Tavern"]
+unique_name_in_owner = true
+wait_time = 60.0
+autostart = true
 
-[node name="Hire" type="Button" parent="Panel/Panels/RPanel/Tavern/Tavern"]
-layout_mode = 0
-offset_left = 139.0
-offset_top = 501.0
-offset_right = 209.0
-offset_bottom = 551.0
-tooltip_text = "RMB adds directly"
-focus_mode = 0
-button_mask = 3
-text = "Hire"
-flat = true
-
-[node name="Hires" type="ItemList" parent="Panel/Panels/RPanel/Tavern/Tavern"]
-custom_minimum_size = Vector2(250, 0)
+[node name="HSplitContainer" type="VBoxContainer" parent="Panel/Panels/RPanel/Tavern/Tavern"]
 layout_mode = 1
-anchors_preset = 13
-anchor_left = 0.5
-anchor_right = 0.5
+anchors_preset = 15
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -125.0
-offset_top = 37.0
-offset_right = 125.0
-offset_bottom = -53.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Panel/Panels/RPanel/Tavern/Tavern/HSplitContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Hires" type="ItemList" parent="Panel/Panels/RPanel/Tavern/Tavern/HSplitContainer"]
+unique_name_in_owner = true
+layout_mode = 2
 size_flags_horizontal = 3
+size_flags_vertical = 3
 focus_mode = 0
 theme_override_font_sizes/font_size = 16
 allow_reselect = true
 max_text_lines = 8
 script = ExtResource("34_td7jr")
 
-[node name="TavernTimer" type="Timer" parent="Panel/Panels/RPanel/Tavern/Tavern"]
-unique_name_in_owner = true
-wait_time = 60.0
-autostart = true
+[node name="Panel3" type="Panel" parent="Panel/Panels/RPanel/Tavern/Tavern/HSplitContainer"]
+custom_minimum_size = Vector2(0, 5)
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Control" type="HBoxContainer" parent="Panel/Panels/RPanel/Tavern/Tavern/HSplitContainer"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="Panel/Panels/RPanel/Tavern/Tavern/HSplitContainer/Control"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Refresh" type="Button" parent="Panel/Panels/RPanel/Tavern/Tavern/HSplitContainer/Control"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Refresh"
+flat = true
+alignment = 0
+
+[node name="Panel3" type="Panel" parent="Panel/Panels/RPanel/Tavern/Tavern/HSplitContainer/Control"]
+custom_minimum_size = Vector2(5, 0)
+layout_mode = 2
+
+[node name="Hire" type="Button" parent="Panel/Panels/RPanel/Tavern/Tavern/HSplitContainer/Control"]
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "RMB adds directly"
+focus_mode = 0
+button_mask = 3
+text = "Hire"
+flat = true
+
+[node name="Panel2" type="Panel" parent="Panel/Panels/RPanel/Tavern/Tavern/HSplitContainer/Control"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Panel2" type="Panel" parent="Panel/Panels/RPanel/Tavern/Tavern/HSplitContainer"]
+custom_minimum_size = Vector2(0, 5)
+layout_mode = 2
+size_flags_vertical = 4
 
 [node name="Reserves" type="TextureRect" parent="Panel/Panels/RPanel/Tavern"]
 unique_name_in_owner = true
@@ -693,44 +723,106 @@ size_flags_horizontal = 3
 texture = ExtResource("30_sb2w3")
 expand_mode = 1
 
-[node name="Fire" type="Button" parent="Panel/Panels/RPanel/Tavern/Reserves"]
+[node name="HSplitContainer" type="VBoxContainer" parent="Panel/Panels/RPanel/Tavern/Reserves"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Panel/Panels/RPanel/Tavern/Reserves/HSplitContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxEmpty_x3rx7")
+
+[node name="ReserveVB" type="CheckBox" parent="Panel/Panels/RPanel/Tavern/Reserves/HSplitContainer/Panel"]
+unique_name_in_owner = true
+self_modulate = Color(0, 1, 0, 1)
 layout_mode = 0
-offset_left = 64.0
-offset_top = 500.0
-offset_right = 134.0
-offset_bottom = 550.0
+offset_left = 241.0
+offset_top = 10.0
+offset_right = 265.0
+offset_bottom = 34.0
+tooltip_text = "Available"
+focus_mode = 0
+button_pressed = true
+flat = true
+
+[node name="PartyCB" type="CheckBox" parent="Panel/Panels/RPanel/Tavern/Reserves/HSplitContainer/Panel"]
+unique_name_in_owner = true
+self_modulate = Color(1, 1, 0, 1)
+layout_mode = 0
+offset_left = 217.0
+offset_top = 10.0
+offset_right = 241.0
+offset_bottom = 34.0
+tooltip_text = "Party"
+focus_mode = 0
+flat = true
+
+[node name="DeadCB" type="CheckBox" parent="Panel/Panels/RPanel/Tavern/Reserves/HSplitContainer/Panel"]
+unique_name_in_owner = true
+self_modulate = Color(1, 0, 0, 1)
+layout_mode = 0
+offset_left = 193.0
+offset_top = 10.0
+offset_right = 217.0
+offset_bottom = 34.0
+tooltip_text = "Dead"
+focus_mode = 0
+flat = true
+
+[node name="Hired" type="ItemList" parent="Panel/Panels/RPanel/Tavern/Reserves/HSplitContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_mode = 0
+theme_override_font_sizes/font_size = 16
+select_mode = 1
+allow_reselect = true
+max_text_lines = 8
+text_overrun_behavior = 0
+fixed_icon_size = Vector2i(12, 24)
+script = ExtResource("44_e2a1r")
+
+[node name="Panel3" type="Panel" parent="Panel/Panels/RPanel/Tavern/Reserves/HSplitContainer"]
+custom_minimum_size = Vector2(0, 5)
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Control" type="HBoxContainer" parent="Panel/Panels/RPanel/Tavern/Reserves/HSplitContainer"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="Panel/Panels/RPanel/Tavern/Reserves/HSplitContainer/Control"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Fire" type="Button" parent="Panel/Panels/RPanel/Tavern/Reserves/HSplitContainer/Control"]
+layout_mode = 2
 focus_mode = 0
 text = "Fire"
 
-[node name="Add" type="Button" parent="Panel/Panels/RPanel/Tavern/Reserves"]
-layout_mode = 0
-offset_left = 139.0
-offset_top = 500.0
-offset_right = 209.0
-offset_bottom = 550.0
+[node name="Panel3" type="Panel" parent="Panel/Panels/RPanel/Tavern/Reserves/HSplitContainer/Control"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+
+[node name="Add" type="Button" parent="Panel/Panels/RPanel/Tavern/Reserves/HSplitContainer/Control"]
+layout_mode = 2
 focus_mode = 0
 text = "Add"
 flat = true
 
-[node name="Hired" type="ItemList" parent="Panel/Panels/RPanel/Tavern/Reserves"]
-custom_minimum_size = Vector2(250, 0)
-layout_mode = 1
-anchors_preset = 13
-anchor_left = 0.5
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -125.0
-offset_top = 37.0
-offset_right = 125.0
-offset_bottom = -53.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Panel2" type="Panel" parent="Panel/Panels/RPanel/Tavern/Reserves/HSplitContainer/Control"]
+layout_mode = 2
 size_flags_horizontal = 3
-focus_mode = 0
-theme_override_font_sizes/font_size = 16
-allow_reselect = true
-max_text_lines = 8
-script = ExtResource("44_e2a1r")
+
+[node name="Panel2" type="Panel" parent="Panel/Panels/RPanel/Tavern/Reserves/HSplitContainer"]
+custom_minimum_size = Vector2(0, 5)
+layout_mode = 2
+size_flags_vertical = 4
 
 [node name="Members" parent="Panel" instance=ExtResource("33_mpsr4")]
 unique_name_in_owner = true
@@ -790,17 +882,20 @@ expand_mode = 1
 [connection signal="pressed" from="Panel/Panels/LPanel/Gear/Button" to="Panel/Panels/LPanel/Gear/Button" method="_on_pressed"]
 [connection signal="pressed" from="Panel/Panels/LPanel/Gear/StatsButton" to="Panel/Panels/LPanel/Gear" method="_on_stats_button_pressed"]
 [connection signal="pressed" from="Panel/Panels/LPanel/Gear/Axe" to="Panel/Panels/LPanel/Gear" method="_on_axe_pressed"]
-[connection signal="pressed" from="Panel/Panels/LPanel/Gear/Axe/ConfirmFire" to="Panel/Panels/LPanel/Gear" method="_on_confirm_fire_pressed"]
+[connection signal="pressed" from="Panel/Panels/LPanel/Gear/Axe/ConfirmFire" to="Panel/Panels/LPanel/Gear" method="_on_confirm_axe_pressed"]
 [connection signal="timeout" from="Panel/Panels/LPanel/Gear/Axe/Timer" to="Panel/Panels/LPanel/Gear" method="_on_timer_timeout"]
 [connection signal="item_selected" from="Panel/Panels/RPanel/Adventure/VBoxContainer/MidContainer/Level" to="Panel/Panels/RPanel/Adventure/VBoxContainer/MidContainer/Level" method="_on_item_selected"]
 [connection signal="item_selected" from="Panel/Panels/RPanel/Adventure/VBoxContainer/MidContainer/Level" to="Panel/Panels/RPanel/Adventure/VBoxContainer/MidContainer/VBoxContainer/Stats" method="_on_level_item_selected"]
 [connection signal="pressed" from="Panel/Panels/RPanel/Adventure/VBoxContainer/BotContainer/Start" to="Panel/Panels/RPanel/Adventure/VBoxContainer/MidContainer/VBoxContainer/Stats" method="_on_start_pressed"]
-[connection signal="pressed" from="Panel/Panels/RPanel/Tavern/Tavern/Refresh" to="Panel/Panels/RPanel/Tavern/Tavern/Hires" method="_on_pressed"]
-[connection signal="gui_input" from="Panel/Panels/RPanel/Tavern/Tavern/Hire" to="Panel/Panels/RPanel/Tavern/Tavern/Hires" method="_on_add_hire_gui_input"]
-[connection signal="item_selected" from="Panel/Panels/RPanel/Tavern/Tavern/Hires" to="Panel/Panels/RPanel/Tavern/Tavern/Hires" method="_on_item_selected"]
-[connection signal="timeout" from="Panel/Panels/RPanel/Tavern/Tavern/TavernTimer" to="Panel/Panels/RPanel/Tavern/Tavern/Hires" method="_on_timer_timeout"]
-[connection signal="pressed" from="Panel/Panels/RPanel/Tavern/Reserves/Fire" to="Panel/Panels/RPanel/Tavern/Reserves/Hired" method="_on_terminate_pressed"]
-[connection signal="pressed" from="Panel/Panels/RPanel/Tavern/Reserves/Add" to="Panel/Panels/RPanel/Tavern/Reserves/Hired" method="_on_add_pressed"]
-[connection signal="item_selected" from="Panel/Panels/RPanel/Tavern/Reserves/Hired" to="Panel/Panels/RPanel/Tavern/Reserves/Hired" method="_on_item_selected"]
+[connection signal="timeout" from="Panel/Panels/RPanel/Tavern/Tavern/TavernTimer" to="Panel/Panels/RPanel/Tavern/Tavern/HSplitContainer/Hires" method="_on_pressed"]
+[connection signal="item_selected" from="Panel/Panels/RPanel/Tavern/Tavern/HSplitContainer/Hires" to="Panel/Panels/RPanel/Tavern/Tavern/HSplitContainer/Hires" method="_on_item_selected"]
+[connection signal="pressed" from="Panel/Panels/RPanel/Tavern/Tavern/HSplitContainer/Control/Refresh" to="Panel/Panels/RPanel/Tavern/Tavern/HSplitContainer/Hires" method="_on_pressed"]
+[connection signal="gui_input" from="Panel/Panels/RPanel/Tavern/Tavern/HSplitContainer/Control/Hire" to="Panel/Panels/RPanel/Tavern/Tavern/HSplitContainer/Hires" method="_on_add_hire_gui_input"]
+[connection signal="toggled" from="Panel/Panels/RPanel/Tavern/Reserves/HSplitContainer/Panel/ReserveVB" to="Panel/Panels/RPanel/Tavern/Reserves/HSplitContainer/Hired" method="_ready"]
+[connection signal="toggled" from="Panel/Panels/RPanel/Tavern/Reserves/HSplitContainer/Panel/PartyCB" to="Panel/Panels/RPanel/Tavern/Reserves/HSplitContainer/Hired" method="_ready"]
+[connection signal="toggled" from="Panel/Panels/RPanel/Tavern/Reserves/HSplitContainer/Panel/DeadCB" to="Panel/Panels/RPanel/Tavern/Reserves/HSplitContainer/Hired" method="_ready"]
+[connection signal="item_selected" from="Panel/Panels/RPanel/Tavern/Reserves/HSplitContainer/Hired" to="Panel/Panels/RPanel/Tavern/Reserves/HSplitContainer/Hired" method="_on_item_selected"]
+[connection signal="pressed" from="Panel/Panels/RPanel/Tavern/Reserves/HSplitContainer/Control/Fire" to="Panel/Panels/RPanel/Tavern/Reserves/HSplitContainer/Hired" method="_on_fire_pressed"]
+[connection signal="pressed" from="Panel/Panels/RPanel/Tavern/Reserves/HSplitContainer/Control/Add" to="Panel/Panels/RPanel/Tavern/Reserves/HSplitContainer/Hired" method="_on_add_pressed"]
 [connection signal="item_clicked" from="Panel/PartyList" to="Panel/PartyList" method="_on_item_clicked"]
 [connection signal="item_selected" from="Panel/PartyList" to="Panel/PartyList" method="_on_item_selected"]
